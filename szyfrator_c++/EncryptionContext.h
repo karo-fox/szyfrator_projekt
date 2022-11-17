@@ -11,6 +11,6 @@ private:
 public:
 	EncryptionContext(std::unique_ptr<CipherStrategy> &&cipher);
 	void set_cipher(std::unique_ptr<CipherStrategy> &&cipher);
-	std::string encrypt_message(std::string message) const;
-	std::string decrypt_message(std::string message) const;
+	std::string encrypt_message(const std::string& message) const;
+	std::string decrypt_message(const std::string& message) const;
 };

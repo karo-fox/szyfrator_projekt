@@ -5,9 +5,9 @@
 
 class CeasarSetter {
 private:
-	UserInterface& ui_;
+	const UserInterface& ui_;
 public:
-	CeasarSetter(UserInterface& ui);
+	CeasarSetter(const UserInterface& ui);
 	int set_offset() const;
 	Direction set_direction() const;
 };

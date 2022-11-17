@@ -6,8 +6,8 @@
 #include "EnglishCLI.h"
 
 int main() {
-	EnglishCLI ui{};
-	CeasarSetter ceasar_setter{ ui };
+	const EnglishCLI ui{};
+	const CeasarSetter ceasar_setter{ ui };
 	CeasarCipher ceasar{ ceasar_setter };
 	ceasar.new_settings();
 	EncryptionContext context{std::make_unique<CeasarCipher>(ceasar)};

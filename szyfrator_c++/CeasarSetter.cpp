@@ -2,7 +2,7 @@
 #include "UserInterface.h"
 #include "ceasar.h"
 
-CeasarSetter::CeasarSetter(UserInterface& ui)
+CeasarSetter::CeasarSetter(const UserInterface& ui)
 	: ui_{ ui } {}
 
 int CeasarSetter::set_offset() const {

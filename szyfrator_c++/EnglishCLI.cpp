@@ -20,6 +20,6 @@ bool EnglishCLI::check_input() const {
 	return true;
 }
 
-void EnglishCLI::show_text(std::string text) const {
+void EnglishCLI::show_text(const std::string& text) const {
 	std::cout << "<: " << text << '\n';
 }

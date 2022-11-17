@@ -11,12 +11,12 @@ private:
 	int offset_;
 	Direction direction_;
 	bool settings_; // true if settings are different from reset_settings();
-	CeasarSetter& setter_;
+	const CeasarSetter& setter_;
 
 public:
-	CeasarCipher(CeasarSetter& setter);
+	CeasarCipher(const CeasarSetter& setter);
 	void new_settings() override;
 	void reset_settings() override;
-	std::string encrypt(std::string& txt) const override;
-	std::string decrypt(std::string& txt) const override;
+	std::string encrypt(const std::string& txt) const override;
+	std::string decrypt(const std::string& txt) const override;
 };

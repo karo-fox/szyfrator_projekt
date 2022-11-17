@@ -3,7 +3,7 @@
 #include "CeasarSetter.h"
 #include "ceasar.h"
 
-CeasarCipher::CeasarCipher(CeasarSetter& setter) : setter_{ setter } {
+CeasarCipher::CeasarCipher(const CeasarSetter& setter) : setter_{ setter } {
 	CeasarCipher::reset_settings();
 }
 
@@ -20,10 +20,10 @@ void CeasarCipher::reset_settings() {
 }
 
 
-std::string CeasarCipher::encrypt(std::string& txt) const {
+std::string CeasarCipher::encrypt(const std::string& txt) const {
 	return "Inside CeasarCipher::encrypt: " + txt;
 }
 
-std::string CeasarCipher::decrypt(std::string& txt) const {
+std::string CeasarCipher::decrypt(const std::string& txt) const {
 	return "Inside CeasarCipher::decrypt: " + txt;
 }

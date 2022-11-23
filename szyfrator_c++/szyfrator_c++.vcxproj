@@ -132,15 +132,18 @@
     <ClCompile Include="EncryptionContext.cpp" />
     <ClCompile Include="EnglishCLI.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="ValidationException.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ceasar.h" />
     <ClInclude Include="CeasarCipher.h" />
     <ClInclude Include="CeasarSetter.h" />
+    <ClInclude Include="CipherSetter.h" />
     <ClInclude Include="CipherStrategy.h" />
     <ClInclude Include="EncryptionContext.h" />
     <ClInclude Include="EnglishCLI.h" />
     <ClInclude Include="UserInterface.h" />
+    <ClInclude Include="ValidationException.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

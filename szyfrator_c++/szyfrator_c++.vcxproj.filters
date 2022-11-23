@@ -13,45 +13,75 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Ciphers">
+      <UniqueIdentifier>{0c3a38ff-6fcb-4a88-b2c2-ae000b9fd10e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI">
+      <UniqueIdentifier>{5f79e4d6-e087-49d5-a683-2234d253a805}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Ciphers">
+      <UniqueIdentifier>{c14bd8e1-ddcf-465a-bb59-6879e132db3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UI">
+      <UniqueIdentifier>{68c18277-d7e5-4182-ad18-73a6ba916d00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Ciphers\CeasarCipher">
+      <UniqueIdentifier>{a673b74c-d6e5-41eb-bfde-ee965bcba4c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Ciphers\CeasarCipher">
+      <UniqueIdentifier>{1cc20a4d-168b-4281-a413-32d9330c2665}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\exceptions">
+      <UniqueIdentifier>{4aa8437b-c083-46fa-95ef-a9749877e414}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="EnglishCLI.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
     <ClCompile Include="EncryptionContext.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Ciphers</Filter>
     </ClCompile>
     <ClCompile Include="CeasarCipher.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="EnglishCLI.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Ciphers\CeasarCipher</Filter>
     </ClCompile>
     <ClCompile Include="CeasarSetter.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Ciphers\CeasarCipher</Filter>
+    </ClCompile>
+    <ClCompile Include="ValidationException.cpp">
+      <Filter>Source Files\exceptions</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="EncryptionContext.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="CipherStrategy.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Ciphers</Filter>
     </ClInclude>
-    <ClInclude Include="CeasarCipher.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="UserInterface.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="EncryptionContext.h">
+      <Filter>Header Files\Ciphers</Filter>
     </ClInclude>
     <ClInclude Include="EnglishCLI.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\UI</Filter>
     </ClInclude>
-    <ClInclude Include="CeasarSetter.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="UserInterface.h">
+      <Filter>Header Files\UI</Filter>
     </ClInclude>
     <ClInclude Include="ceasar.h">
+      <Filter>Header Files\Ciphers\CeasarCipher</Filter>
+    </ClInclude>
+    <ClInclude Include="CeasarCipher.h">
+      <Filter>Header Files\Ciphers\CeasarCipher</Filter>
+    </ClInclude>
+    <ClInclude Include="CeasarSetter.h">
+      <Filter>Header Files\Ciphers\CeasarCipher</Filter>
+    </ClInclude>
+    <ClInclude Include="ValidationException.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CipherSetter.h">
+      <Filter>Header Files\Ciphers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -31,7 +31,7 @@
     <Filter Include="Source Files\Ciphers\CeasarCipher">
       <UniqueIdentifier>{1cc20a4d-168b-4281-a413-32d9330c2665}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\exceptions">
+    <Filter Include="Source Files\Exceptions">
       <UniqueIdentifier>{4aa8437b-c083-46fa-95ef-a9749877e414}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -52,7 +52,7 @@
       <Filter>Source Files\Ciphers\CeasarCipher</Filter>
     </ClCompile>
     <ClCompile Include="ValidationException.cpp">
-      <Filter>Source Files\exceptions</Filter>
+      <Filter>Source Files\Exceptions</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -13,4 +13,7 @@ int main() {
 	EncryptionContext context{std::make_unique<CeasarCipher>(ceasar)};
 	std::string message{ context.encrypt_message("karolina") };
 	ui.show_text(message);
+
+	ui.show_text("[y/n]");
+	ui.check_input();
 }

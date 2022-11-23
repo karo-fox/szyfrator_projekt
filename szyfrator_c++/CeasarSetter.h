@@ -1,13 +1,12 @@
 #pragma once
 
-#include "UserInterface.h"
+#include "CipherSetter.h"
 #include "ceasar.h"
+#include "UserInterface.h"
 
-class CeasarSetter {
-private:
-	const UserInterface& ui_;
+class CeasarSetter : public CipherSetter {
 public:
-	CeasarSetter(const UserInterface& ui);
+	CeasarSetter(const UserInterface& ui) : CipherSetter{ ui } {};
 	int set_offset() const;
 	Direction set_direction() const;
 };

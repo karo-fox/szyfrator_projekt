@@ -2,9 +2,6 @@
 #include "UserInterface.h"
 #include "ceasar.h"
 
-CeasarSetter::CeasarSetter(const UserInterface& ui)
-	: ui_{ ui } {}
-
 int CeasarSetter::set_offset() const {
 	ui_.show_text("Set offset: ");
 	int offset = ui_.integer_input();

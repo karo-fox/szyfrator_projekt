@@ -31,9 +31,6 @@
     <Filter Include="Source Files\Ciphers\CeasarCipher">
       <UniqueIdentifier>{1cc20a4d-168b-4281-a413-32d9330c2665}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Exceptions">
-      <UniqueIdentifier>{4aa8437b-c083-46fa-95ef-a9749877e414}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -51,8 +48,8 @@
     <ClCompile Include="CeasarSetter.cpp">
       <Filter>Source Files\Ciphers\CeasarCipher</Filter>
     </ClCompile>
-    <ClCompile Include="ValidationException.cpp">
-      <Filter>Source Files\Exceptions</Filter>
+    <ClCompile Include="validators.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -82,6 +79,9 @@
     </ClInclude>
     <ClInclude Include="CipherSetter.h">
       <Filter>Header Files\Ciphers</Filter>
+    </ClInclude>
+    <ClInclude Include="validators.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -39,7 +39,7 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="EnglishCLI.cpp">
+    <ClCompile Include="CLI.cpp">
       <Filter>Source Files\UI</Filter>
     </ClCompile>
     <ClCompile Include="EncryptionContext.cpp">
@@ -62,7 +62,7 @@
     <ClInclude Include="EncryptionContext.h">
       <Filter>Header Files\Ciphers</Filter>
     </ClInclude>
-    <ClInclude Include="EnglishCLI.h">
+    <ClInclude Include="CLI.h">
       <Filter>Header Files\UI</Filter>
     </ClInclude>
     <ClInclude Include="UserInterface.h">

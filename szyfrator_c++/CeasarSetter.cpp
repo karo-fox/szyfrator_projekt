@@ -9,8 +9,9 @@ int CeasarSetter::set_offset() const {
 		ui_.show_text("Set offset: ");
 		int offset = ui_.integer_input();
 		try {
-			validateMaxValue(offset, 26);
-			validateMinValue(offset, 0);
+			validateNot0(offset);
+			validateMaxValue(offset, maxOffset_);
+			validateMinValue(offset, 1);
 			return offset;
 		}
 		catch (const ValidationException<int>& e) {
@@ -37,5 +38,18 @@ Direction CeasarSetter::set_direction() const {
 			ui_.show_text(e.what());
 		}
 		
+	}
+}
+
+void CeasarSetter::choose_alphabet(Alphabet alphabet) {
+	switch (alphabet) {
+	case Alphabet::en:
+		CeasarSetter::maxOffset_ = 26;
+		return;
+	case Alphabet::pl:
+		CeasarSetter::maxOffset_ = 32;
+		return;
+	default:
+		return;
 	}
 }

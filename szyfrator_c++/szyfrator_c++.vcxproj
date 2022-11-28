@@ -130,7 +130,7 @@
     <ClCompile Include="CeasarCipher.cpp" />
     <ClCompile Include="CeasarSetter.cpp" />
     <ClCompile Include="EncryptionContext.cpp" />
-    <ClCompile Include="EnglishCLI.cpp" />
+    <ClCompile Include="CLI.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="validators.cpp" />
   </ItemGroup>
@@ -141,7 +141,7 @@
     <ClInclude Include="CipherSetter.h" />
     <ClInclude Include="CipherStrategy.h" />
     <ClInclude Include="EncryptionContext.h" />
-    <ClInclude Include="EnglishCLI.h" />
+    <ClInclude Include="CLI.h" />
     <ClInclude Include="UserInterface.h" />
     <ClInclude Include="ValidationException.h" />
     <ClInclude Include="validators.h" />

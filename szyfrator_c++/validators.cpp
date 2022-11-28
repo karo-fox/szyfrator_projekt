@@ -1,4 +1,5 @@
 #include <string>
+#include <vector>
 #include "ValidationException.h"
 #include "validators.h"
 
@@ -18,6 +19,17 @@ void validateNotEmpty(const std::string& value) {
 	}
 }
 
+void validateAllowed(const std::string& value, std::vector<std::string> allowed) {
+	for (const std::string option : allowed) {
+		if (value == option) {
+			return;
+		}
+	}
+	throw ValidationException<std::string>(
+		"Input not allowed", value
+		);
+}
+
 void validateNot0(int value) {
 	if (value == 0) {
 		throw ValidationException<int>(
@@ -35,11 +47,9 @@ void validateMaxValue(int value, int max) {
 }
 
 void validateMinValue(int value, int min) {
-	if (value > min) {
+	if (value < min) {
 		throw ValidationException<int>(
 			"Cannot be less than " + std::to_string(min), value
 			);
 	}
 }
-
-int getOne() { return 1; }

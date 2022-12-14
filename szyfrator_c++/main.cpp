@@ -14,7 +14,4 @@ int main() {
 	std::string input = ui.text_input();
 	std::string message{ context.encrypt_message(input) };
 	ui.show_text(message);
-
-	ui.show_text("[y/n]");
-	ui.check_input();
 }

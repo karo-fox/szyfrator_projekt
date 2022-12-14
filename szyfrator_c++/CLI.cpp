@@ -3,12 +3,12 @@
 
 #include "CLI.h"
 
-void CLI::ignoreLine() const {
+void CLI::ignore_line() const {
 	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 }
 
 template <typename T>
-T CLI::saveInput(const std::string& prompt) const {
+T CLI::safe_input(const std::string& prompt) const {
 	while (true) {
 		T input{};
 		std::cout << prompt;
@@ -16,18 +16,18 @@ T CLI::saveInput(const std::string& prompt) const {
 
 		if (!std::cin) {
 			std::cin.clear();
-			ignoreLine();
+			ignore_line();
 			std::cout << CLI::oprompt_ << "Invalid input. Try again. \n";
 		}
 		else {
-			ignoreLine();
+			ignore_line();
 			return input;
 		}
 	}
 }
 
 template <>
-std::string CLI::saveInput(const std::string& prompt) const {
+std::string CLI::safe_input(const std::string& prompt) const {
 	std::string input{};
 	std::cout << prompt;
 	std::getline(std::cin, input);
@@ -35,16 +35,16 @@ std::string CLI::saveInput(const std::string& prompt) const {
 }
 
 std::string CLI::text_input() const {
-	return saveInput<std::string>(CLI::iprompt_);
+	return safe_input<std::string>(CLI::iprompt_);
 }
 
 int CLI::integer_input() const {
-	return saveInput<int>(CLI::iprompt_);
+	return safe_input<int>(CLI::iprompt_);
 }
 
 bool CLI::check_input() const {
 	while (true) {
-		std::string input = saveInput<std::string>(CLI::iprompt_);
+		std::string input = safe_input<std::string>(CLI::iprompt_);
 		if (input == "y" || input == "Y") {
 			return true;
 		}

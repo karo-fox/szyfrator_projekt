@@ -6,8 +6,8 @@
 class CLI : public UserInterface {
 private:
 	template <typename T>
-	T saveInput(const std::string& prompt) const;
-	void ignoreLine() const;
+	T safe_input(const std::string& prompt) const;
+	void ignore_line() const;
 	const std::string iprompt_{ ":> " };
 	const std::string oprompt_{ "<: " };
 public:

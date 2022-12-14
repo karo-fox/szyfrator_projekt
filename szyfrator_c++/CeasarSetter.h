@@ -6,7 +6,7 @@
 
 class CeasarSetter : public CipherSetter {
 private:
-	int maxOffset_{ 26 };
+	int max_offset_{ 26 };
 public:
 	CeasarSetter(const UserInterface& ui) : CipherSetter{ ui } {};
 	int set_offset() const;

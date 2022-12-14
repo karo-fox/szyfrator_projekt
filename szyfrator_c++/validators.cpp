@@ -3,15 +3,15 @@
 #include "ValidationException.h"
 #include "validators.h"
 
-void validateMaxLength(const std::string& value, int maxLength) {
+void validate_max_length(const std::string& value, int max_length) {
 	if (value.length() > 0) {
 		throw ValidationException<std::string>(
-			"Cannot exceed max length, (max length: " + maxLength + ')', value
+			"Cannot exceed max length, (max length: " + max_length + ')', value
 		);
 	}
 };
 
-void validateNotEmpty(const std::string& value) {
+void validate_not_empty(const std::string& value) {
 	if (value.empty()) {
 		throw ValidationException<std::string>(
 			"Cannot be empty", value
@@ -19,7 +19,7 @@ void validateNotEmpty(const std::string& value) {
 	}
 }
 
-void validateAllowed(const std::string& value, std::vector<std::string> allowed) {
+void validate_allowed(const std::string& value, std::vector<std::string> allowed) {
 	for (const std::string option : allowed) {
 		if (value == option) {
 			return;
@@ -30,7 +30,7 @@ void validateAllowed(const std::string& value, std::vector<std::string> allowed)
 		);
 }
 
-void validateNot0(int value) {
+void validate_not_0(int value) {
 	if (value == 0) {
 		throw ValidationException<int>(
 			"Cannot be 0", value
@@ -38,7 +38,7 @@ void validateNot0(int value) {
 	}
 }
 
-void validateMaxValue(int value, int max) {
+void validate_max_value(int value, int max) {
 	if (value > max) {
 		throw ValidationException<int>(
 			"Cannot be greater than " + std::to_string(max), value
@@ -46,7 +46,7 @@ void validateMaxValue(int value, int max) {
 	}
 }
 
-void validateMinValue(int value, int min) {
+void validate_min_value(int value, int min) {
 	if (value < min) {
 		throw ValidationException<int>(
 			"Cannot be less than " + std::to_string(min), value

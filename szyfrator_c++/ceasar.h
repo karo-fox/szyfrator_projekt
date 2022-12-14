@@ -1,7 +1,8 @@
 #pragma once
 
 enum Direction {
-	right, left
+	left = -1,
+	right = 1,
 };
 
 enum Alphabet {

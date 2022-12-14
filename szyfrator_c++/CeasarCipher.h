@@ -13,10 +13,13 @@ private:
 	bool settings_; // true if settings are different from reset_settings();
 	const CeasarSetter& setter_;
 
+	bool is_in(char letter) const;
+	bool is_out(char letter) const;
+
 public:
 	CeasarCipher(const CeasarSetter& setter);
 	void new_settings() override;
 	void reset_settings() override;
-	std::string encrypt(const std::string& txt) const override;
-	std::string decrypt(const std::string& txt) const override;
+	std::string encrypt(const std::string& txt) override;
+	std::string decrypt(const std::string& txt) override;
 };

@@ -128,7 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CeasarCipher.cpp" />
-    <ClCompile Include="CeasarSetter.cpp" />
+    <ClCompile Include="CeasarCommunicator.cpp" />
     <ClCompile Include="EncryptionContext.cpp" />
     <ClCompile Include="CLI.cpp" />
     <ClCompile Include="main.cpp" />
@@ -137,8 +137,9 @@
   <ItemGroup>
     <ClInclude Include="ceasar.h" />
     <ClInclude Include="CeasarCipher.h" />
-    <ClInclude Include="CeasarSetter.h" />
-    <ClInclude Include="CipherSetter.h" />
+    <ClInclude Include="CeasarCommunicator.h" />
+    <ClInclude Include="ciphers.h" />
+    <ClInclude Include="CipherCommunicator.h" />
     <ClInclude Include="CipherStrategy.h" />
     <ClInclude Include="EncryptionContext.h" />
     <ClInclude Include="CLI.h" />

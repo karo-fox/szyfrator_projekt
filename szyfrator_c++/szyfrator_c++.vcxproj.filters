@@ -48,7 +48,7 @@
     <ClCompile Include="CeasarCipher.cpp">
       <Filter>Source Files\Ciphers\CeasarCipher</Filter>
     </ClCompile>
-    <ClCompile Include="CeasarSetter.cpp">
+    <ClCompile Include="CeasarCommunicator.cpp">
       <Filter>Source Files\Ciphers\CeasarCipher</Filter>
     </ClCompile>
     <ClCompile Include="validators.cpp">
@@ -74,10 +74,10 @@
     <ClInclude Include="CeasarCipher.h">
       <Filter>Header Files\Ciphers\CeasarCipher</Filter>
     </ClInclude>
-    <ClInclude Include="CeasarSetter.h">
+    <ClInclude Include="CeasarCommunicator.h">
       <Filter>Header Files\Ciphers\CeasarCipher</Filter>
     </ClInclude>
-    <ClInclude Include="CipherSetter.h">
+    <ClInclude Include="CipherCommunicator.h">
       <Filter>Header Files\Ciphers</Filter>
     </ClInclude>
     <ClInclude Include="validators.h">
@@ -85,6 +85,9 @@
     </ClInclude>
     <ClInclude Include="ValidationException.h">
       <Filter>Header Files\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="ciphers.h">
+      <Filter>Header Files\Ciphers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,10 +1,10 @@
-#include "CeasarSetter.h"
+#include "CeasarCommunicator.h"
 #include "UserInterface.h"
 #include "ceasar.h"
 #include "validators.h"
 #include "ValidationException.h"
 
-int CeasarSetter::set_offset() const {
+int CeasarCommunicator::set_offset() const {
 	while (true) {
 		ui_.show_text("Set offset: ");
 		int offset = ui_.integer_input();
@@ -20,7 +20,7 @@ int CeasarSetter::set_offset() const {
 	}
 }
 
-Direction CeasarSetter::set_direction() const {
+Direction CeasarCommunicator::set_direction() const {
 	while (true) {
 		ui_.show_text("Set direction (right or left): ");
 		std::string input = ui_.text_input();
@@ -41,13 +41,13 @@ Direction CeasarSetter::set_direction() const {
 	}
 }
 
-void CeasarSetter::choose_alphabet(Alphabet alphabet) {
+void CeasarCommunicator::choose_alphabet(Alphabet alphabet) {
 	switch (alphabet) {
 	case Alphabet::en:
-		CeasarSetter::max_offset_ = 26;
+		CeasarCommunicator::max_offset_ = 26;
 		return;
 	case Alphabet::pl:
-		CeasarSetter::max_offset_ = 32;
+		CeasarCommunicator::max_offset_ = 32;
 		return;
 	default:
 		return;

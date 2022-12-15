@@ -1,13 +1,14 @@
 #include <iostream>
 #include <memory>
 #include "EncryptionContext.h"
+#include "CeasarCommunicator.h"
 #include "CeasarCipher.h"
-#include "CeasarSetter.h"
 #include "CLI.h"
+#include "CipherStrategy.h"
 
 int main() {
 	const CLI ui{};
-	const CeasarSetter ceasar_setter{ ui };
+	const CeasarCommunicator ceasar_setter{ ui };
 	CeasarCipher ceasar{ ceasar_setter };
 	ceasar.new_settings();
 	EncryptionContext context{std::make_unique<CeasarCipher>(ceasar)};
@@ -17,4 +18,7 @@ int main() {
 	ui.show_text(e_message);
 	std::string d_message{ context.decrypt_message(e_message) };
 	ui.show_text(d_message);
+
+	//const CLI ui{};
+	
 }

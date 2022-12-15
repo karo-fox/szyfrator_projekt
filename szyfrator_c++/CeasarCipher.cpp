@@ -1,15 +1,16 @@
 #include <string>
 #include "CeasarCipher.h"
-#include "CeasarSetter.h"
+#include "CeasarCommunicator.h"
 #include "ceasar.h"
 
-CeasarCipher::CeasarCipher(const CeasarSetter& setter) : setter_{ setter } {
+CeasarCipher::CeasarCipher(const CeasarCommunicator& communicator)
+	: communicator_{ communicator } {
 	CeasarCipher::reset_settings();
 }
 
 void CeasarCipher::new_settings() {
-	CeasarCipher::offset_ = setter_.set_offset();
-	CeasarCipher::direction_ = setter_.set_direction();
+	CeasarCipher::offset_ = communicator_.set_offset();
+	CeasarCipher::direction_ = communicator_.set_direction();
 	CeasarCipher::settings_ = true; // you should assert this somehow
 }
 

@@ -2,9 +2,9 @@
 
 #include "UserInterface.h"
 
-class CipherSetter {
+class CipherCommunicator {
 protected:
 	const UserInterface& ui_;
 public:
-	CipherSetter(const UserInterface& ui) : ui_{ ui } {};
+	CipherCommunicator(const UserInterface& ui) : ui_{ ui } {};
 };

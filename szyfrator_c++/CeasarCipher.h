@@ -2,7 +2,7 @@
 
 #include <string>
 #include "CipherStrategy.h"
-#include "CeasarSetter.h"
+#include "CeasarCommunicator.h"
 #include "ceasar.h"
 
 
@@ -11,13 +11,13 @@ private:
 	int offset_;
 	Direction direction_;
 	bool settings_; // true if settings are different from reset_settings();
-	const CeasarSetter& setter_;
+	const CeasarCommunicator& communicator_;
 
 	bool is_in(char letter) const;
 	bool is_out(char letter) const;
 
 public:
-	CeasarCipher(const CeasarSetter& setter);
+	CeasarCipher(const CeasarCommunicator& communicator);
 	void new_settings() override;
 	void reset_settings() override;
 	std::string encrypt(const std::string& txt) override;

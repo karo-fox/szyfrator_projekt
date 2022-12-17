@@ -132,6 +132,8 @@
     <ClCompile Include="EncryptionContext.cpp" />
     <ClCompile Include="CLI.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainMenu.cpp" />
+    <ClCompile Include="ScreenController.cpp" />
     <ClCompile Include="setup.cpp" />
     <ClCompile Include="validators.cpp" />
   </ItemGroup>
@@ -144,6 +146,8 @@
     <ClInclude Include="CipherStrategy.h" />
     <ClInclude Include="EncryptionContext.h" />
     <ClInclude Include="CLI.h" />
+    <ClInclude Include="ScreenController.h" />
+    <ClInclude Include="screens.h" />
     <ClInclude Include="setup.h" />
     <ClInclude Include="UserInterface.h" />
     <ClInclude Include="ValidationException.h" />

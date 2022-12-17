@@ -5,6 +5,7 @@
 
 #include "UserInterface.h"
 #include "CLI.h"
+#include "ScreenController.h"
 
 #include "ciphers.h"
 #include "EncryptionContext.h"
@@ -29,7 +30,10 @@ int main() {
 	EncryptionContext context{ std::make_unique<CeasarCipher>(CeasarCipher{ui}) }; // initialize with whatever cipher
 	std::map<Cipher, CipherStrategy&> ciphers{ setup_ciphers(ui) };
 
-	ciphers.find(Cipher::ceasar)->second.new_settings();
+	ScreenController controller{ ui };
+	controller.start();
+
+	//ciphers.find(Cipher::ceasar)->second.new_settings();
 
 	// main menu: 1) encrypt / decrypt, 2) settings, 3) quit
 	// encrypt / decrypt: () type message, () action, 1) choose cipher, 2) back

@@ -11,5 +11,4 @@ public:
 	CeasarCommunicator(const UserInterface& ui) : CipherCommunicator{ ui } {};
 	int set_offset() const;
 	Direction set_direction() const;
-	void choose_alphabet(Alphabet alphabet);
 };

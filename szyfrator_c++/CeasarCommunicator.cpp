@@ -40,16 +40,3 @@ Direction CeasarCommunicator::set_direction() const {
 		
 	}
 }
-
-void CeasarCommunicator::choose_alphabet(Alphabet alphabet) {
-	switch (alphabet) {
-	case Alphabet::en:
-		CeasarCommunicator::max_offset_ = 26;
-		return;
-	case Alphabet::pl:
-		CeasarCommunicator::max_offset_ = 32;
-		return;
-	default:
-		return;
-	}
-}

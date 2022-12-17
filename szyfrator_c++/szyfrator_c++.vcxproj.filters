@@ -54,6 +54,9 @@
     <ClCompile Include="validators.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="setup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CipherStrategy.h">
@@ -88,6 +91,9 @@
     </ClInclude>
     <ClInclude Include="ciphers.h">
       <Filter>Header Files\Ciphers</Filter>
+    </ClInclude>
+    <ClInclude Include="setup.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -132,6 +132,7 @@
     <ClCompile Include="EncryptionContext.cpp" />
     <ClCompile Include="CLI.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="setup.cpp" />
     <ClCompile Include="validators.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -143,6 +144,7 @@
     <ClInclude Include="CipherStrategy.h" />
     <ClInclude Include="EncryptionContext.h" />
     <ClInclude Include="CLI.h" />
+    <ClInclude Include="setup.h" />
     <ClInclude Include="UserInterface.h" />
     <ClInclude Include="ValidationException.h" />
     <ClInclude Include="validators.h" />

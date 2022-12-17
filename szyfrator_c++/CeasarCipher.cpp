@@ -1,10 +1,11 @@
 #include <string>
 #include "CeasarCipher.h"
+#include "UserInterface.h"
 #include "CeasarCommunicator.h"
 #include "ceasar.h"
 
-CeasarCipher::CeasarCipher(const CeasarCommunicator& communicator)
-	: communicator_{ communicator } {
+CeasarCipher::CeasarCipher(const UserInterface& ui)
+	: communicator_{ ui } {
 	CeasarCipher::reset_settings();
 }
 
@@ -39,6 +40,11 @@ std::string CeasarCipher::encrypt(const std::string& txt) {
 	return result;
 }
 
+std::string CeasarCipher::decrypt(const std::string& txt) {
+	CeasarCipher::offset_ = 26 - CeasarCipher::offset_;
+	return CeasarCipher::encrypt(txt);
+}
+
 bool CeasarCipher::is_in(char letter) const {
 	if (CeasarCipher::direction_ == Direction::right) {
 		return (letter >= 65 && letter <= 90 - CeasarCipher::offset_)
@@ -61,7 +67,4 @@ bool CeasarCipher::is_out(char letter) const {
 	}
 }
 
-std::string CeasarCipher::decrypt(const std::string& txt) {
-	CeasarCipher::offset_ = 26 - CeasarCipher::offset_;
-	return CeasarCipher::encrypt(txt);
-}
+

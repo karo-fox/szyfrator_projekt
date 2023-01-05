@@ -3,6 +3,7 @@
 #include <string>
 
 #include "screens.h"
+#include "MainMenu.h"
 #include "UserInterface.h"
 
 ScreenType MainMenu::run() const {

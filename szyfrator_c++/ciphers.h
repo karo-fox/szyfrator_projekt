@@ -1,10 +1,16 @@
 #pragma once
 
+/// <summary>
+/// Available ciphers
+/// </summary>
 enum Cipher {
 	ceasar
 };
 
-enum Action {
+/// <summary>
+/// Actions that user can take during encryption
+/// </summary>
+enum CipherActions {
 	encrypt,
 	decrypt,
 };

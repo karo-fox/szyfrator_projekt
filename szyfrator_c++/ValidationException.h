@@ -3,6 +3,10 @@
 #include <string>
 #include <stdexcept>
 
+/// <summary>
+/// Exception for validation failures
+/// </summary>
+/// <typeparam name="T">Type of the validated value</typeparam>
 template <typename T>
 class ValidationException : public std::runtime_error {
 private:

@@ -130,7 +130,7 @@
     <ClCompile Include="CeasarCipher.cpp" />
     <ClCompile Include="CeasarCommunicator.cpp" />
     <ClCompile Include="EncryptionContext.cpp" />
-    <ClCompile Include="CLI.cpp" />
+    <ClCompile Include="ConsoleUI.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="ScreenController.cpp" />
@@ -145,7 +145,8 @@
     <ClInclude Include="CipherCommunicator.h" />
     <ClInclude Include="CipherStrategy.h" />
     <ClInclude Include="EncryptionContext.h" />
-    <ClInclude Include="CLI.h" />
+    <ClInclude Include="ConsoleUI.h" />
+    <ClInclude Include="MainMenu.h" />
     <ClInclude Include="ScreenController.h" />
     <ClInclude Include="screens.h" />
     <ClInclude Include="setup.h" />

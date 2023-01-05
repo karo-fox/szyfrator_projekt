@@ -4,7 +4,7 @@
 #include "setup.h"
 
 #include "UserInterface.h"
-#include "CLI.h"
+#include "ConsoleUI.h"
 #include "ScreenController.h"
 
 #include "ciphers.h"
@@ -26,8 +26,8 @@ int main() {
 
 
 	// setup
-	const CLI ui{};
-	EncryptionContext context{ std::make_unique<CeasarCipher>(CeasarCipher{ui}) }; // initialize with whatever cipher
+	const ConsoleUI ui{};
+	EncryptionContext context{ std::make_unique<CeasarCipher>(CeasarCipher{ui}) }; // initialize with default cipher
 	std::map<Cipher, CipherStrategy&> ciphers{ setup_ciphers(ui) };
 
 	ScreenController controller{ ui };

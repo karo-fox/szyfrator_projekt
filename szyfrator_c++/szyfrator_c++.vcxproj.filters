@@ -37,6 +37,9 @@
     <Filter Include="Header Files\UI\screens">
       <UniqueIdentifier>{a397d774-6356-497f-9b3f-5444d765be6b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\UI\screens">
+      <UniqueIdentifier>{0ca706b1-bae0-4e1b-bfa5-19458bb4f199}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -61,10 +64,19 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ScreenController.cpp">
-      <Filter>Source Files\UI</Filter>
+      <Filter>Source Files\UI\screens</Filter>
     </ClCompile>
-    <ClCompile Include="MainMenu.cpp">
-      <Filter>Source Files\UI</Filter>
+    <ClCompile Include="MainMenuScreen.cpp">
+      <Filter>Source Files\UI\screens</Filter>
+    </ClCompile>
+    <ClCompile Include="SettingsScreen.cpp">
+      <Filter>Source Files\UI\screens</Filter>
+    </ClCompile>
+    <ClCompile Include="EncryptionScreen.cpp">
+      <Filter>Source Files\UI\screens</Filter>
+    </ClCompile>
+    <ClCompile Include="Screen.cpp">
+      <Filter>Source Files\UI\screens</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -110,7 +122,13 @@
     <ClInclude Include="screens.h">
       <Filter>Header Files\UI\screens</Filter>
     </ClInclude>
-    <ClInclude Include="MainMenu.h">
+    <ClInclude Include="MainMenuScreen.h">
+      <Filter>Header Files\UI\screens</Filter>
+    </ClInclude>
+    <ClInclude Include="SettingsScreen.h">
+      <Filter>Header Files\UI\screens</Filter>
+    </ClInclude>
+    <ClInclude Include="EncryptionScreen.h">
       <Filter>Header Files\UI\screens</Filter>
     </ClInclude>
   </ItemGroup>

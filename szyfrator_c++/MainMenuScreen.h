@@ -6,12 +6,9 @@
 /// <summary>
 /// Main Menu Screen for the program
 /// </summary>
-class MainMenu : public Screen {
-private:
-	const UserInterface& ui_;
+class MainMenuScreen : public Screen {
 public:
-	MainMenu(const UserInterface& ui) : ui_{ ui } {};
-
+	MainMenuScreen(const UserInterface& ui) : Screen{ ui } {};
 	/// <summary>
 	/// Presents some actions for user to take:
 	/// - go to settings
@@ -19,5 +16,5 @@ public:
 	/// - quit
 	/// </summary>
 	/// <returns>Screen that should be run next</returns>
-	ScreenType run() const;
+	ScreenType run() const override;
 };

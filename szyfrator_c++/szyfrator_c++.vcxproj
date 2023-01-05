@@ -131,9 +131,12 @@
     <ClCompile Include="CeasarCommunicator.cpp" />
     <ClCompile Include="EncryptionContext.cpp" />
     <ClCompile Include="ConsoleUI.cpp" />
+    <ClCompile Include="EncryptionScreen.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MainMenu.cpp" />
+    <ClCompile Include="MainMenuScreen.cpp" />
+    <ClCompile Include="Screen.cpp" />
     <ClCompile Include="ScreenController.cpp" />
+    <ClCompile Include="SettingsScreen.cpp" />
     <ClCompile Include="setup.cpp" />
     <ClCompile Include="validators.cpp" />
   </ItemGroup>
@@ -146,9 +149,11 @@
     <ClInclude Include="CipherStrategy.h" />
     <ClInclude Include="EncryptionContext.h" />
     <ClInclude Include="ConsoleUI.h" />
-    <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="EncryptionScreen.h" />
+    <ClInclude Include="MainMenuScreen.h" />
     <ClInclude Include="ScreenController.h" />
     <ClInclude Include="screens.h" />
+    <ClInclude Include="SettingsScreen.h" />
     <ClInclude Include="setup.h" />
     <ClInclude Include="UserInterface.h" />
     <ClInclude Include="ValidationException.h" />

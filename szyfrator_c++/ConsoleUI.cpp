@@ -58,3 +58,7 @@ bool ConsoleUI::bool_input() const {
 void ConsoleUI::show_text(const std::string& text) const {
 	std::cout << ConsoleUI::oprompt_ << text << '\n';
 }
+
+void ConsoleUI::show_title(const std::string& title) const {
+	std::string prompt{};
+}

@@ -36,4 +36,10 @@ public:
 	int integer_input() const override;
 	bool bool_input() const override;
 	void show_text(const std::string& text) const override;
+
+	/// <summary>
+	/// Shows the title of the screen
+	/// </summary>
+	/// <param name="title">Title to show</param>
+	void show_title(const std::string& title) const;
 };

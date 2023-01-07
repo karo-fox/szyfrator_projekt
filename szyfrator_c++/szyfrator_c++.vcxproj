@@ -135,7 +135,8 @@
     <ClCompile Include="EncryptionScreen.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MenuScreen.cpp" />
-    <ClCompile Include="Screen.cpp" />
+    <ClCompile Include="MenuScreenCommunicator.cpp" />
+    <ClCompile Include="ScreenCommunicator.cpp" />
     <ClCompile Include="ScreenController.cpp" />
     <ClCompile Include="SettingsScreen.cpp" />
     <ClCompile Include="setup.cpp" />
@@ -152,6 +153,8 @@
     <ClInclude Include="EncryptionContext.h" />
     <ClInclude Include="ConsoleUI.h" />
     <ClInclude Include="EncryptionScreen.h" />
+    <ClInclude Include="MenuScreenCommunicator.h" />
+    <ClInclude Include="ScreenCommunicator.h" />
     <ClInclude Include="Settings.h" />
     <ClInclude Include="MenuScreen.h" />
     <ClInclude Include="ScreenController.h" />

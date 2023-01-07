@@ -11,7 +11,7 @@ private:
 	/// </summary>
 	int max_offset_{ 26 };
 public:
-	CeasarCommunicator(const UserInterface& ui) : Communicator{ ui } {};
+	CeasarCommunicator(UserInterface& ui) : Communicator{ ui } {};
 
 	/// <summary>
 	/// Asks user for integer input to set the CeasarCipher offset

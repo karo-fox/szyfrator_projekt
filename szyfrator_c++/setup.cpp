@@ -6,7 +6,7 @@
 #include "CipherStrategy.h"
 #include "CeasarCipher.h"
 
-std::map<Cipher, CipherStrategy&> setup_ciphers(const UserInterface& ui) {
+std::map<Cipher, CipherStrategy&> setup_ciphers(UserInterface& ui) {
 	std::map<Cipher, CipherStrategy&> ciphers{};
 	CeasarCipher ceasar{ ui };
 	ciphers.insert(std::pair<Cipher, CeasarCipher&>(Cipher::ceasar, ceasar));

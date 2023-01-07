@@ -78,6 +78,9 @@
     <ClCompile Include="Screen.cpp">
       <Filter>Source Files\UI\screens</Filter>
     </ClCompile>
+    <ClCompile Include="utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CipherStrategy.h">
@@ -100,9 +103,6 @@
     </ClInclude>
     <ClInclude Include="CeasarCommunicator.h">
       <Filter>Header Files\Ciphers\CeasarCipher</Filter>
-    </ClInclude>
-    <ClInclude Include="CipherCommunicator.h">
-      <Filter>Header Files\Ciphers</Filter>
     </ClInclude>
     <ClInclude Include="validators.h">
       <Filter>Header Files</Filter>
@@ -130,6 +130,15 @@
     </ClInclude>
     <ClInclude Include="EncryptionScreen.h">
       <Filter>Header Files\UI\screens</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Communicator.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

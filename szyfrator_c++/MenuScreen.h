@@ -9,7 +9,7 @@
 /// <summary>
 /// Main Menu Screen for the program
 /// </summary>
-class MainMenuScreen : public Screen {
+class MenuScreen : public Screen {
 private:
 	const std::map<std::string, ScreenType> change_screen_{
 		{"settings", ScreenType::settings},
@@ -22,7 +22,7 @@ private:
 		"quit: quit\n"
 	};
 public:
-	MainMenuScreen(UserInterface& ui) : Screen{ ui } {};
+	MenuScreen(UserInterface& ui) : Screen{ ui } {};
 	/// <summary>
 	/// Presents some actions for user to take:
 	/// - go to settings

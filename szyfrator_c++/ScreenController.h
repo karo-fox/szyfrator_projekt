@@ -29,7 +29,7 @@ public:
 	/// and pushes MainMenu Screen on top of the screen_stack_
 	/// </summary>
 	/// <param name="ui">User Interface for Screen initialization</param>
-	ScreenController(const UserInterface& ui);
+	ScreenController(UserInterface& ui);
 
 	/// <summary>
 	/// Runs Screens in a loop

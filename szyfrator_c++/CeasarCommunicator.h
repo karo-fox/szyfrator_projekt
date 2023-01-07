@@ -1,17 +1,17 @@
 #pragma once
 
-#include "CipherCommunicator.h"
+#include "Communicator.h"
 #include "ceasar.h"
 #include "UserInterface.h"
 
-class CeasarCommunicator : public CipherCommunicator {
+class CeasarCommunicator : public Communicator {
 private:
 	/// <summary>
 	/// Maximum offset for the CeasarCipher
 	/// </summary>
 	int max_offset_{ 26 };
 public:
-	CeasarCommunicator(const UserInterface& ui) : CipherCommunicator{ ui } {};
+	CeasarCommunicator(const UserInterface& ui) : Communicator{ ui } {};
 
 	/// <summary>
 	/// Asks user for integer input to set the CeasarCipher offset

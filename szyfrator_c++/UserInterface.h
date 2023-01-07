@@ -2,11 +2,15 @@
 
 #include <string>
 
+#include "Settings.h"
+
 /// <summary>
-/// Abstract class for user interfaces
+/// Manages User Interface
 /// </summary>
 class UserInterface {
 public:
+	Settings settings_{};
+
 	/// <summary>
 	/// Gets text input from user
 	/// </summary>

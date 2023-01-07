@@ -26,11 +26,6 @@ private:
 	/// console prompt for input
 	/// </summary>
 	const std::string iprompt_{ ":> " };
-
-	/// <summary>
-	/// console prompt for output
-	/// </summary>
-	const std::string oprompt_{ "<: " };
 public:
 	std::string text_input() const override;
 	int integer_input() const override;

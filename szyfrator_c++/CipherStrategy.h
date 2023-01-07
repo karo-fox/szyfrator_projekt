@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-#include "CipherCommunicator.h"
+#include "Communicator.h"
 
 /// <summary>
 /// Abract class for ciphers

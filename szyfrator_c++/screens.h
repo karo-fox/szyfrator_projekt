@@ -1,7 +1,10 @@
 #pragma once
 
 #include <string>
+#include <map>
+
 #include "UserInterface.h"
+#include "Settings.h"
 
 /// <summary>
 /// Available types of Screens
@@ -19,9 +22,11 @@ enum ScreenType {
 /// </summary>
 class Screen {
 protected:
-	const UserInterface& ui_;
+	UserInterface& ui_;
+	const std::map<std::string, ScreenType> change_screen_{};
+	const std::string actions_prompt_{};
 public:
-	Screen(const UserInterface& ui) : ui_{ ui } {};
+	Screen(UserInterface& ui) : ui_{ ui } {};
 	/// <summary>
 	/// Presents some actions for user to take and manages them
 	/// </summary>

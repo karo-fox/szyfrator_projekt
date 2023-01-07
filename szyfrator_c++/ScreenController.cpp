@@ -12,7 +12,7 @@
 #include "UserInterface.h"
 
 
-ScreenController::ScreenController(const UserInterface& ui) {
+ScreenController::ScreenController(UserInterface& ui) {
 	auto main_menu = MainMenuScreen{ ui };
 	ScreenController::screens_.insert(
 		std::make_pair(ScreenType::main_menu, std::make_shared<MainMenuScreen>(main_menu))

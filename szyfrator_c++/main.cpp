@@ -26,7 +26,7 @@ int main() {
 
 
 	// setup
-	const ConsoleUI ui{};
+	ConsoleUI ui{};
 	EncryptionContext context{ std::make_unique<CeasarCipher>(CeasarCipher{ui}) }; // initialize with default cipher
 	std::map<Cipher, CipherStrategy&> ciphers{ setup_ciphers(ui) };
 

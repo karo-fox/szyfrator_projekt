@@ -23,6 +23,9 @@ enum ScreenType {
 class Screen {
 protected:
 	UserInterface& ui_;
+	/// <summary>
+	/// Maps user input to next Screen that should be presentd
+	/// </summary>
 	const std::map<std::string, ScreenType> change_screen_{};
 	const std::string actions_prompt_{};
 public:
@@ -32,5 +35,10 @@ public:
 	/// </summary>
 	/// <returns>Screen that should be run next</returns>
 	virtual ScreenType run() const = 0;
+
+	/// <summary>
+	/// Shows Screen's title in a frame
+	/// </summary>
+	/// <param name="title">Screen's title to show</param>
 	void show_title(const std::string& title) const;
 };

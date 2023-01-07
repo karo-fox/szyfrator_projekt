@@ -19,7 +19,11 @@ private:
 		"file: enable / disable saving to file\n"
 		"back: return to main menu"
 	};
-
+	
+	/// <summary>
+	/// Gets new UI language from user
+	/// </summary>
+	/// <returns>New language to be set</returns>
 	Language get_language_() const;
 public:
 	SettingsScreen(UserInterface& ui) : Screen{ ui } {};

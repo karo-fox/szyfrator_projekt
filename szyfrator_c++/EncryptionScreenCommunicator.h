@@ -6,6 +6,7 @@
 #include "ScreenCommunicator.h"
 #include "UserInterface.h"
 #include "lang.h"
+#include "ciphers.h"
 
 class EncryptionScreenCommunicator : public ScreenCommunicator {
 public:
@@ -14,4 +15,10 @@ public:
 		LangCode::encryption_screen_actions,
 		{ "start", "back" }
 	} {};
+
+	CipherAction get_cipher_action() const;
+
+	std::string get_message() const;
+
+	Cipher get_cipher() const;
 };

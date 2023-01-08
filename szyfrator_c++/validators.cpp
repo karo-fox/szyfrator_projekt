@@ -4,7 +4,7 @@
 #include "validators.h"
 
 void validate_max_length(const std::string& value, int max_length) {
-	if (value.length() > 0) {
+	if (value.length() > max_length) {
 		throw ValidationException<std::string>(
 			"Cannot exceed max length, (max length: " + max_length + ')', value
 		);
@@ -29,6 +29,9 @@ void validate_allowed(const std::string& value, std::vector<std::string> allowed
 		"Input not allowed", value
 		);
 }
+
+
+
 
 void validate_not_0(int value) {
 	if (value == 0) {

@@ -10,9 +10,10 @@
 #include "SettingsScreen.h"
 #include "EncryptionScreen.h"
 #include "UserInterface.h"
+#include "EncryptionContext.h"
 
 
-ScreenController::ScreenController(UserInterface& ui) {
+ScreenController::ScreenController(UserInterface& ui, EncryptionContext& context) {
 	auto main_menu = MenuScreen{ ui };
 	ScreenController::screens_.insert(
 		std::make_pair(ScreenType::main_menu, std::make_shared<MenuScreen>(main_menu))
@@ -21,7 +22,7 @@ ScreenController::ScreenController(UserInterface& ui) {
 	ScreenController::screens_.insert(
 		std::make_pair(ScreenType::settings, std::make_shared<SettingsScreen>(settings))
 	);
-	auto encryption = EncryptionScreen{ ui };
+	auto encryption = EncryptionScreen{ ui, context };
 	ScreenController::screens_.insert(
 		std::make_pair(ScreenType::encryption, std::make_shared<EncryptionScreen>(encryption))
 	);

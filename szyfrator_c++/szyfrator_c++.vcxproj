@@ -133,6 +133,7 @@
     <ClCompile Include="EncryptionContext.cpp" />
     <ClCompile Include="ConsoleUI.cpp" />
     <ClCompile Include="EncryptionScreen.cpp" />
+    <ClCompile Include="EncryptionScreenCommunicator.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MenuScreen.cpp" />
     <ClCompile Include="ScreenCommunicator.cpp" />

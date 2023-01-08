@@ -10,7 +10,7 @@ enum Cipher {
 /// <summary>
 /// Actions that user can take during encryption
 /// </summary>
-enum CipherActions {
+enum CipherAction {
 	encrypt,
 	decrypt,
 };

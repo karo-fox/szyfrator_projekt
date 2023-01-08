@@ -7,6 +7,8 @@
 #include "UserInterface.h"
 #include "EncryptionScreenCommunicator.h"
 
+#include "EncryptionContext.h"
+
 /// <summary>
 /// Manages actions connected with encrypting and decrypting messages
 /// </summary>
@@ -17,8 +19,10 @@ private:
 	};
 
 	const EncryptionScreenCommunicator communicator_;
+	EncryptionContext& context_;
 public:
-	EncryptionScreen(UserInterface& ui) : Screen{ ui }, communicator_{ ui } {};
+	EncryptionScreen(UserInterface& ui, EncryptionContext& context)
+		: Screen{ ui }, communicator_{ ui }, context_{ context } {};
 	/// <summary>
 	/// Presents some actions for user to take:
 	/// - encrypt or decrypt a message

@@ -14,9 +14,7 @@
 
 int main() {
 	//const CLI ui{};
-	//CeasarCipher ceasar{ ui };
-	//ceasar.new_settings();
-	//EncryptionContext context{std::make_unique<CeasarCipher>(ceasar)};
+	
 	//ui.show_text("Provide message: ");
 	//std::string input = ui.text_input();
 	//std::string e_message{ context.encrypt_message(input) };
@@ -27,10 +25,10 @@ int main() {
 
 	// setup
 	ConsoleUI ui{};
-	EncryptionContext context{ std::make_unique<CeasarCipher>(CeasarCipher{ui}) }; // initialize with default cipher
 	std::map<Cipher, CipherStrategy&> ciphers{ setup_ciphers(ui) };
+	EncryptionContext context{ std::make_unique<CeasarCipher>(CeasarCipher{ui}), ui }; // initialize with default cipher
 
-	ScreenController controller{ ui };
+	ScreenController controller{ ui, context };
 	controller.start();
 
 	//ciphers.find(Cipher::ceasar)->second.new_settings();

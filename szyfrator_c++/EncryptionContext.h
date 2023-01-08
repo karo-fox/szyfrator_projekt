@@ -1,7 +1,10 @@
 #pragma once
 
 #include <memory>
+
 #include "CipherStrategy.h"
+#include "UserInterface.h"
+#include "setup.h"
 
 /// <summary>
 /// Stores currently active cipher
@@ -12,7 +15,10 @@ private:
 	std::unique_ptr<CipherStrategy> active_cipher_;
 
 public:
-	EncryptionContext(std::unique_ptr<CipherStrategy> &&cipher);
+	EncryptionContext(std::unique_ptr<CipherStrategy> &&cipher, UserInterface& ui)
+		: ciphers_{ setup_ciphers(ui) }, active_cipher_{std::move(cipher)} {};
+
+	std::map<Cipher, CipherStrategy&> ciphers_;
 
 	/// <summary>
 	/// Sets new active cipher

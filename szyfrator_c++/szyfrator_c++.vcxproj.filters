@@ -108,6 +108,9 @@
     <ClCompile Include="ScreenCommunicator.cpp">
       <Filter>Source Files\UI\screens</Filter>
     </ClCompile>
+    <ClCompile Include="EncryptionScreenCommunicator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CipherStrategy.h">

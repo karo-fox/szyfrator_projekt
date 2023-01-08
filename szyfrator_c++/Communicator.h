@@ -7,7 +7,7 @@
 /// </summary>
 class Communicator {
 protected:
-	UserInterface& ui_;
+	const UserInterface& ui_;
 public:
-	Communicator(UserInterface& ui) : ui_{ ui } {};
+	Communicator(const UserInterface& ui) : ui_{ ui } {};
 };

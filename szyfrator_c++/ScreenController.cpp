@@ -14,28 +14,28 @@
 
 ScreenController::ScreenController(UserInterface& ui) {
 	auto main_menu = MenuScreen{ ui };
-	screens_.insert(
+	ScreenController::screens_.insert(
 		std::make_pair(ScreenType::main_menu, std::make_shared<MenuScreen>(main_menu))
 	);
 	auto settings = SettingsScreen{ ui };
-	screens_.insert(
+	ScreenController::screens_.insert(
 		std::make_pair(ScreenType::settings, std::make_shared<SettingsScreen>(settings))
 	);
 	auto encryption = EncryptionScreen{ ui };
-	screens_.insert(
+	ScreenController::screens_.insert(
 		std::make_pair(ScreenType::encryption, std::make_shared<EncryptionScreen>(encryption))
 	);
-	screen_stack_.push(std::make_shared<MenuScreen>(main_menu));
+	ScreenController::screen_stack_.push(std::make_shared<MenuScreen>(main_menu));
 }
 
 void ScreenController::start() {
 	while (true) {
-		auto next = screen_stack_.top().get()->run();
+		auto next = ScreenController::screen_stack_.top().get()->run();
 		if (next == ScreenType::back) {
-			screen_stack_.pop();
+			ScreenController::screen_stack_.pop();
 		}
 		else if (next != ScreenType::stay) {
-			screen_stack_.push(screens_.at(next));
+			ScreenController::screen_stack_.push(ScreenController::screens_[next]);
 		}
 	}
 }

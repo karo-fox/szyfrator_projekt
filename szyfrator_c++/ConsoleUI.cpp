@@ -35,16 +35,16 @@ std::string ConsoleUI::safe_input(const std::string& prompt) const {
 }
 
 std::string ConsoleUI::text_input() const {
-	return safe_input<std::string>(iprompt_);
+	return safe_input<std::string>(ConsoleUI::iprompt_);
 }
 
 int ConsoleUI::integer_input() const {
-	return safe_input<int>(iprompt_);
+	return safe_input<int>(ConsoleUI::iprompt_);
 }
 
 bool ConsoleUI::bool_input() const {
 	while (true) {
-		std::string input = safe_input<std::string>(iprompt_);
+		std::string input = safe_input<std::string>(ConsoleUI::iprompt_);
 		if (input == "y" || input == "Y") {
 			return true;
 		}

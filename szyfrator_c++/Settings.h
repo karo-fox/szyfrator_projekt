@@ -1,8 +1,6 @@
 #pragma once
 
-enum Language {
-	en, pl,
-};
+#include "lang.h"
 
 /// <summary>
 /// Stores user settings:

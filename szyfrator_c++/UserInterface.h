@@ -3,13 +3,22 @@
 #include <string>
 
 #include "Settings.h"
+#include "lang.h"
 
 /// <summary>
 /// Manages User Interface
 /// </summary>
 class UserInterface {
+private:
+	const langMap translations_;
+
+	langMap setup_lang_();
 public:
+	UserInterface() : translations_{ setup_lang_() } {};
+
 	Settings settings_{};
+
+	std::string parse(LangCode code) const;
 
 	/// <summary>
 	/// Gets text input from user

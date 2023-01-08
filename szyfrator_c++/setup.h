@@ -11,4 +11,4 @@
 /// </summary>
 /// <param name="ui">User Interface for respective Cipher Communicators</param>
 /// <returns>Map storing all ciphers</returns>
-std::map<Cipher, CipherStrategy&> setup_ciphers(const UserInterface& ui);
+std::map<Cipher, CipherStrategy&> setup_ciphers(UserInterface& ui);

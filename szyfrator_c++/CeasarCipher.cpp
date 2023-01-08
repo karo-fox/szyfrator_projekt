@@ -4,7 +4,7 @@
 #include "CeasarCommunicator.h"
 #include "ceasar.h"
 
-CeasarCipher::CeasarCipher(const UserInterface& ui)
+CeasarCipher::CeasarCipher(UserInterface& ui)
 	: communicator_{ ui } {
 	CeasarCipher::reset_settings();
 }

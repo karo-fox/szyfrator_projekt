@@ -135,10 +135,12 @@
     <ClCompile Include="EncryptionScreen.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MenuScreen.cpp" />
-    <ClCompile Include="Screen.cpp" />
+    <ClCompile Include="ScreenCommunicator.cpp" />
     <ClCompile Include="ScreenController.cpp" />
     <ClCompile Include="SettingsScreen.cpp" />
+    <ClCompile Include="SettingsScreenCommunicator.cpp" />
     <ClCompile Include="setup.cpp" />
+    <ClCompile Include="UserInterface.cpp" />
     <ClCompile Include="utils.cpp" />
     <ClCompile Include="validators.cpp" />
   </ItemGroup>
@@ -149,14 +151,21 @@
     <ClInclude Include="ciphers.h" />
     <ClInclude Include="Communicator.h" />
     <ClInclude Include="CipherStrategy.h" />
+    <ClInclude Include="en.h" />
     <ClInclude Include="EncryptionContext.h" />
     <ClInclude Include="ConsoleUI.h" />
     <ClInclude Include="EncryptionScreen.h" />
+    <ClInclude Include="EncryptionScreenCommunicator.h" />
+    <ClInclude Include="lang.h" />
+    <ClInclude Include="MenuScreenCommunicator.h" />
+    <ClInclude Include="pl.h" />
+    <ClInclude Include="ScreenCommunicator.h" />
     <ClInclude Include="Settings.h" />
     <ClInclude Include="MenuScreen.h" />
     <ClInclude Include="ScreenController.h" />
     <ClInclude Include="screens.h" />
     <ClInclude Include="SettingsScreen.h" />
+    <ClInclude Include="SettingsScreenCommunicator.h" />
     <ClInclude Include="setup.h" />
     <ClInclude Include="UserInterface.h" />
     <ClInclude Include="utils.h" />

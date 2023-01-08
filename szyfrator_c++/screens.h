@@ -35,10 +35,4 @@ public:
 	/// </summary>
 	/// <returns>Screen that should be run next</returns>
 	virtual ScreenType run() const = 0;
-
-	/// <summary>
-	/// Shows Screen's title in a frame
-	/// </summary>
-	/// <param name="title">Screen's title to show</param>
-	void show_title(const std::string& title) const;
 };

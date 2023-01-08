@@ -51,7 +51,7 @@ private:
 	bool is_out(char letter) const;
 
 public:
-	CeasarCipher(const UserInterface& ui);
+	CeasarCipher(UserInterface& ui);
 	void new_settings() override;
 	void reset_settings() override;
 	std::string encrypt(const std::string& txt) override;

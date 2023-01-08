@@ -2,23 +2,22 @@
 
 #include "screens.h"
 #include "MenuScreen.h"
+#include "lang.h"
 
 ScreenType MenuScreen::run() const {
-	MenuScreen::show_title("Main menu");
+	communicator_.show_title(ui_.parse(LangCode::menu_title));
 	while (true) {
-		MenuScreen::ui_.show_text(MenuScreen::actions_prompt_);
-		std::string input = MenuScreen::ui_.text_input();
+		communicator_.show_actions();
+		std::string input = communicator_.get_action();
 		if (input == "quit") {
 			exit(0);
 			return ScreenType::stay;
 		}
-		else if (MenuScreen::change_screen_.contains(input)) {
-			return MenuScreen::change_screen_.at(input);
+		else if (change_screen_.contains(input)) {
+			return change_screen_.at(input);
 		}
 		else {
-			MenuScreen::ui_.show_text(
-				"Action not found. Make sure you typed the option correctly and try again:"
-			);
+			communicator_.action_not_found();
 		}
 	}
 

@@ -5,6 +5,7 @@
 
 #include "screens.h"
 #include "UserInterface.h"
+#include "MenuScreenCommunicator.h"
 
 /// <summary>
 /// Main Menu Screen for the program
@@ -15,14 +16,10 @@ private:
 		{"settings", ScreenType::settings},
 		{"encryption", ScreenType::encryption},
 	};
-	const std::string actions_prompt_{
-		"Choose one of the following actions:\n"
-		"settings: go to settings\n"
-		"encryption: encrypt or decrypt message\n"
-		"quit: quit\n"
-	};
+
+	const MenuScreenCommunicator communicator_;
 public:
-	MenuScreen(UserInterface& ui) : Screen{ ui } {};
+	MenuScreen(UserInterface& ui) : Screen{ ui }, communicator_{ ui } {};
 	/// <summary>
 	/// Presents some actions for user to take:
 	/// - go to settings

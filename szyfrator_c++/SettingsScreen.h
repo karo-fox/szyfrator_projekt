@@ -5,6 +5,7 @@
 
 #include "screens.h"
 #include "UserInterface.h"
+#include "SettingsScreenCommunicator.h"
 
 /// <summary>
 /// Settings screen
@@ -14,19 +15,10 @@ private:
 	const std::map<std::string, ScreenType> change_screen_{
 		{"back", ScreenType::back}
 	};
-	const std::string actions_prompt_{
-		"language: change interface langauge\n"
-		"file: enable / disable saving to file\n"
-		"back: return to main menu"
-	};
-	
-	/// <summary>
-	/// Gets new UI language from user
-	/// </summary>
-	/// <returns>New language to be set</returns>
-	Language get_language_() const;
+
+	const SettingsScreenCommunicator communicator_;
 public:
-	SettingsScreen(UserInterface& ui) : Screen{ ui } {};
+	SettingsScreen(UserInterface& ui) : Screen{ ui }, communicator_{ ui } {};
 	/// <summary>
 	/// Presents some actions for user to take:
 	/// - change language

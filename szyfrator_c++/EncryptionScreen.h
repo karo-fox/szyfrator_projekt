@@ -5,6 +5,7 @@
 
 #include "screens.h"
 #include "UserInterface.h"
+#include "EncryptionScreenCommunicator.h"
 
 /// <summary>
 /// Manages actions connected with encrypting and decrypting messages
@@ -14,12 +15,10 @@ private:
 	const std::map<std::string, ScreenType> change_screen_{
 		{"back", ScreenType::back}
 	};
-	const std::string actions_prompt_{
-		"start: start decrypting / encrypting the message\n"
-		"back: go to main menu\n"
-	};
+
+	const EncryptionScreenCommunicator communicator_;
 public:
-	EncryptionScreen(UserInterface& ui) : Screen{ ui } {};
+	EncryptionScreen(UserInterface& ui) : Screen{ ui }, communicator_{ ui } {};
 	/// <summary>
 	/// Presents some actions for user to take:
 	/// - encrypt or decrypt a message

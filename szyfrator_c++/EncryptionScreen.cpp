@@ -2,22 +2,21 @@
 
 #include "EncryptionScreen.h"
 #include "screens.h"
+#include "lang.h"
 
 ScreenType EncryptionScreen::run() const {
-	EncryptionScreen::show_title("Encryption");
+	communicator_.show_title(ui_.parse(LangCode::encryption_title));
 	while (true) {
-		EncryptionScreen::ui_.show_text(EncryptionScreen::actions_prompt_);
-		std::string input = EncryptionScreen::ui_.text_input();
+		communicator_.show_actions();
+		std::string input = communicator_.get_action();
 		if (input == "start") {
 			return ScreenType::stay;
 		}
-		else if (EncryptionScreen::change_screen_.contains(input)) {
-			return EncryptionScreen::change_screen_.at(input);
+		else if (change_screen_.contains(input)) {
+			return change_screen_.at(input);
 		}
 		else {
-			EncryptionScreen::ui_.show_text(
-				"Action not found. Make sure you typed the option correctly and try again:"
-			);
+			communicator_.action_not_found();
 		}
 	}
 }

@@ -1,11 +1,11 @@
 #include <string>
 
-#include "EncryptionScreenCommunicator.h"
+#include "MainScreenCommunicator.h"
 #include "ciphers.h"
 #include "validators.h"
 #include "ValidationException.h"
 
-CipherAction EncryptionScreenCommunicator::get_cipher_action() const {
+CipherAction MainScreenCommunicator::get_cipher_action() const {
     while (true) {
         ui_.show_text("Do you want to encrypt or decrypt?");
         std::string input = ui_.text_input();
@@ -25,7 +25,7 @@ CipherAction EncryptionScreenCommunicator::get_cipher_action() const {
     }
 }
 
-std::string EncryptionScreenCommunicator::get_message() const {
+std::string MainScreenCommunicator::get_message() const {
     while (true) {
         ui_.show_text("Provide a message:");
         std::string input = ui_.text_input();
@@ -40,7 +40,7 @@ std::string EncryptionScreenCommunicator::get_message() const {
    }
 }
 
-Cipher EncryptionScreenCommunicator::get_cipher() const {
+Cipher MainScreenCommunicator::get_cipher() const {
     while (true) {
         ui_.show_text("Choose one of the following ciphers:\nceasar");
         std::string input = ui_.text_input();
@@ -57,7 +57,7 @@ Cipher EncryptionScreenCommunicator::get_cipher() const {
     }
 }
 
-void EncryptionScreenCommunicator::show_output(const std::string& output) const {
+void MainScreenCommunicator::show_output(const std::string& output) const {
     try {
         validate_not_empty(output);
         ui_.show_text("Your result:");

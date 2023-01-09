@@ -28,7 +28,7 @@ private:
 public:
 	/// <summary>
 	/// Puts all available screen into screens_ 
-	/// and pushes MainMenu Screen on top of the screen_stack_
+	/// and pushes Main Screen on top of the screen_stack_
 	/// </summary>
 	/// <param name="ui">User Interface for Screen initialization</param>
 	ScreenController(UserInterface& ui, EncryptionContext& context);

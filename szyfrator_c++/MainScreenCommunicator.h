@@ -1,19 +1,18 @@
 #pragma once
 
-#include <string>
 #include <vector>
+#include <string>
 
 #include "ScreenCommunicator.h"
-#include "UserInterface.h"
 #include "lang.h"
 #include "ciphers.h"
 
-class EncryptionScreenCommunicator : public ScreenCommunicator {
+class MainScreenCommunicator : public ScreenCommunicator {
 public:
-	EncryptionScreenCommunicator(UserInterface& ui) : ScreenCommunicator{ 
-		ui,
-		LangCode::encryption_screen_actions,
-		{ "start", "back" }
+	MainScreenCommunicator(UserInterface& ui) : ScreenCommunicator{ 
+		ui, 
+		LangCode::main_screen_actions, 
+		{ "settings", "encryption", "quit", "start"}
 	} {};
 
 	CipherAction get_cipher_action() const;

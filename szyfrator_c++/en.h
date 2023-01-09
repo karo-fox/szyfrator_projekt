@@ -9,24 +9,24 @@ std::map<LangCode, std::string> english{
 	{ LangCode::yes, "yes" },
 	{ LangCode::no, "no" },
 	{ LangCode::current_language, "English" },
-	{ LangCode::menu_title, "Main Menu" },
+	{ LangCode::main_title, "Main Menu" },
 	{ LangCode::encryption_title, "Encryption" },
 	{ LangCode::settings_title, "Settings" },
 	{ LangCode::show_language, "Language" },
 	{ LangCode::save_to_file, "Save to file" },
 	{ LangCode::choose_language, "Choose language" },
-	{ LangCode::menu_screen_actions,
+	{ LangCode::main_screen_actions,
 		"Choose one of the following actions:\n"
 		"settings: go to settings\n"
 		"encryption: encrypt or decrypt message\n"
 		"quit: quit\n" },
 	{ LangCode::encryption_screen_actions,
 		"start: start decrypting / encrypting the message\n"
-		"back: go to main menu\n" },
+		"back: go to main\n" },
 	{ LangCode::settings_screen_actions,
 		"language: change interface langauge\n"
 		"file: enable / disable saving to file\n"
-		"back: return to main menu\n" },
+		"back: return to main\n" },
 	{ LangCode::available_actions, "Available actions" },
 	{ LangCode::choose_action, "Choose action" },
 	{ LangCode::action_not_found,

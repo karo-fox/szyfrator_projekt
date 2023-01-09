@@ -1,19 +1,23 @@
 #include <string>
-#include <memory>
 
-#include "EncryptionScreen.h"
 #include "screens.h"
+#include "MainScreen.h"
 #include "lang.h"
+
 #include "ciphers.h"
 #include "CeasarCipher.h"
 
-ScreenType EncryptionScreen::run() const {
-	communicator_.show_title(ui_.parse(LangCode::encryption_title));
+ScreenType MainScreen::run() const {
+	communicator_.show_title(ui_.parse(LangCode::main_title));
 	while (true) {
 		communicator_.show_actions();
 		std::string input = communicator_.get_action();
 		if (input == "start") {
-			start_encryption();			
+			start_encryption();
+			return ScreenType::stay;
+		}
+		else if (input == "quit") {
+			exit(0);
 			return ScreenType::stay;
 		}
 		else if (change_screen_.contains(input)) {
@@ -25,7 +29,7 @@ ScreenType EncryptionScreen::run() const {
 	}
 }
 
-void EncryptionScreen::start_encryption() const {
+void MainScreen::start_encryption() const {
 	CipherAction action = communicator_.get_cipher_action();
 	std::string message = communicator_.get_message();
 	Cipher cipher_code = communicator_.get_cipher();
@@ -40,7 +44,7 @@ void EncryptionScreen::start_encryption() const {
 	communicator_.show_output(output);
 }
 
-void EncryptionScreen::provide_cipher(Cipher cipher_code) const {
+void MainScreen::provide_cipher(Cipher cipher_code) const {
 	switch (cipher_code) {
 	case Cipher::ceasar:
 		context_.set_cipher(std::make_unique<CeasarCipher>(CeasarCipher{ ui_ }));

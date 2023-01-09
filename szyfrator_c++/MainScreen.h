@@ -5,21 +5,25 @@
 
 #include "screens.h"
 #include "UserInterface.h"
-#include "MenuScreenCommunicator.h"
+#include "MainScreenCommunicator.h"
+
+#include "EncryptionContext.h"
 
 /// <summary>
-/// Main Menu Screen for the program
+/// Main Screen for the program
 /// </summary>
-class MenuScreen : public Screen {
+class MainScreen : public Screen {
 private:
 	const std::map<std::string, ScreenType> change_screen_{
 		{"settings", ScreenType::settings},
-		{"encryption", ScreenType::encryption},
+		{"start", ScreenType::stay},
 	};
 
-	const MenuScreenCommunicator communicator_;
+	const MainScreenCommunicator communicator_;
+	EncryptionContext& context_;
 public:
-	MenuScreen(UserInterface& ui) : Screen{ ui }, communicator_{ ui } {};
+	MainScreen(UserInterface& ui, EncryptionContext& context)
+		: Screen{ ui }, communicator_{ ui }, context_{ context } {};
 	/// <summary>
 	/// Presents some actions for user to take:
 	/// - go to settings
@@ -28,4 +32,8 @@ public:
 	/// </summary>
 	/// <returns>Screen that should be run next</returns>
 	ScreenType run() const override;
+
+	void start_encryption() const;
+
+	void provide_cipher(Cipher cipher_code) const;
 };

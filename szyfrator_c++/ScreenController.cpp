@@ -6,27 +6,22 @@
 
 #include "ScreenController.h"
 #include "screens.h"
-#include "MenuScreen.h"
+#include "MainScreen.h"
 #include "SettingsScreen.h"
-#include "EncryptionScreen.h"
 #include "UserInterface.h"
 #include "EncryptionContext.h"
 
 
 ScreenController::ScreenController(UserInterface& ui, EncryptionContext& context) {
-	auto main_menu = MenuScreen{ ui };
+	auto main = MainScreen{ ui, context };
 	ScreenController::screens_.insert(
-		std::make_pair(ScreenType::main_menu, std::make_shared<MenuScreen>(main_menu))
+		std::make_pair(ScreenType::main_menu, std::make_shared<MainScreen>(main))
 	);
 	auto settings = SettingsScreen{ ui };
 	ScreenController::screens_.insert(
 		std::make_pair(ScreenType::settings, std::make_shared<SettingsScreen>(settings))
 	);
-	auto encryption = EncryptionScreen{ ui, context };
-	ScreenController::screens_.insert(
-		std::make_pair(ScreenType::encryption, std::make_shared<EncryptionScreen>(encryption))
-	);
-	ScreenController::screen_stack_.push(std::make_shared<MenuScreen>(main_menu));
+	ScreenController::screen_stack_.push(std::make_shared<MainScreen>(main));
 }
 
 void ScreenController::start() {

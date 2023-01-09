@@ -8,6 +8,7 @@
 #include "EncryptionScreenCommunicator.h"
 
 #include "EncryptionContext.h"
+#include "ciphers.h"
 
 /// <summary>
 /// Manages actions connected with encrypting and decrypting messages
@@ -30,4 +31,8 @@ public:
 	/// </summary>
 	/// <returns></returns>
 	ScreenType run() const override;
+
+	void start_encryption() const;
+
+	void provide_cipher(Cipher cipher_code) const;
 };

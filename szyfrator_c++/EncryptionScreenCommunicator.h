@@ -21,4 +21,6 @@ public:
 	std::string get_message() const;
 
 	Cipher get_cipher() const;
+
+	void show_output(const std::string& output) const;
 };

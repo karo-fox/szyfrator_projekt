@@ -56,3 +56,15 @@ Cipher EncryptionScreenCommunicator::get_cipher() const {
         }
     }
 }
+
+void EncryptionScreenCommunicator::show_output(const std::string& output) const {
+    try {
+        validate_not_empty(output);
+        ui_.show_text("Your result:");
+        ui_.show_text(output);
+    }
+    catch (const ValidationException<std::string>& e) {
+        ui_.show_text(e.what());
+    }
+    
+}

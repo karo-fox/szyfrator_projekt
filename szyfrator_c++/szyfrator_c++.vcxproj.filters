@@ -109,7 +109,7 @@
       <Filter>Source Files\UI\screens</Filter>
     </ClCompile>
     <ClCompile Include="EncryptionScreenCommunicator.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\UI\screens\EncryptionScreen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -26,7 +26,7 @@ int main() {
 	// setup
 	ConsoleUI ui{};
 	std::map<Cipher, CipherStrategy&> ciphers{ setup_ciphers(ui) };
-	EncryptionContext context{ std::make_unique<CeasarCipher>(CeasarCipher{ui}), ui }; // initialize with default cipher
+	EncryptionContext context{ std::make_unique<CeasarCipher>(CeasarCipher{ui}) }; // initialize with default cipher
 
 	ScreenController controller{ ui, context };
 	controller.start();

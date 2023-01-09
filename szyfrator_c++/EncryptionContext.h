@@ -15,10 +15,7 @@ private:
 	std::unique_ptr<CipherStrategy> active_cipher_;
 
 public:
-	EncryptionContext(std::unique_ptr<CipherStrategy> &&cipher, UserInterface& ui)
-		: ciphers_{ setup_ciphers(ui) }, active_cipher_{std::move(cipher)} {};
-
-	std::map<Cipher, CipherStrategy&> ciphers_;
+	EncryptionContext(std::unique_ptr<CipherStrategy> &&cipher)	: active_cipher_{std::move(cipher)} {};
 
 	/// <summary>
 	/// Sets new active cipher

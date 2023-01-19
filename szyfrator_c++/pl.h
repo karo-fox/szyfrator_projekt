@@ -11,7 +11,7 @@ std::map<LangCode, std::string> polish{
 	{ LangCode::no, "nie" },
 	{ LangCode::current_language, "Polski" },
 	{ LangCode::invalid_input, "Podano nieprawidlowe dane" },
-	{ LangCode::key_continue, "Nacisnij dowolny klawisz zeby kontunuowac" },
+	{ LangCode::key_continue, "Nacisnij 'enter' zeby kontunuowac" },
 	// screen titles codes
 	{ LangCode::main_title, "Szyfrator" },
 	{ LangCode::settings_title, "Ustawienia" },

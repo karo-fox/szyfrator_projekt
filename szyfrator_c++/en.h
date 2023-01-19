@@ -11,7 +11,7 @@ std::map<LangCode, std::string> english{
 	{ LangCode::no, "no" },
 	{ LangCode::current_language, "English" },
 	{ LangCode::invalid_input, "Invalid input. Try again" },
-	{ LangCode::key_continue, "Press any key to continue" },
+	{ LangCode::key_continue, "Press 'enter' to continue" },
 	// screen titles codes
 	{ LangCode::main_title, "Main Menu" },
 	{ LangCode::settings_title, "Settings" },

@@ -70,3 +70,8 @@ void MainScreenCommunicator::show_output(const std::string& output) const {
     }
     
 }
+
+void MainScreenCommunicator::wait() const {
+    ui_.show_text(ui_.parse(LangCode::key_continue));
+    ui_.text_input();
+}

@@ -14,6 +14,7 @@ ScreenType MainScreen::run() const {
 		std::string input = communicator_.get_action();
 		if (input == "start") {
 			start_encryption();
+			communicator_.wait();
 			return ScreenType::stay;
 		}
 		else if (input == "quit") {

@@ -22,4 +22,6 @@ public:
 	Cipher get_cipher() const;
 
 	void show_output(const std::string& output) const;
+
+	void wait() const;
 };

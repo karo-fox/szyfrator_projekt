@@ -3,7 +3,7 @@
 #include <map>
 #include <string>
 
-enum LangCode {
+enum class LangCode {
 	// general codes
 	yes, no,
 	current_language,
@@ -41,7 +41,7 @@ enum LangCode {
 	v_min_value,
 };
 
-enum Language {
+enum class Language {
 	en, pl
 };
 

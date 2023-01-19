@@ -9,7 +9,7 @@
 /// <summary>
 /// Available types of Screens
 /// </summary>
-enum ScreenType {
+enum class ScreenType {
 	main_menu,
 	settings,
 	encryption,

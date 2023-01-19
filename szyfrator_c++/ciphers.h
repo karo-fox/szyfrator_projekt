@@ -3,14 +3,14 @@
 /// <summary>
 /// Available ciphers
 /// </summary>
-enum Cipher {
+enum class Cipher {
 	ceasar
 };
 
 /// <summary>
 /// Actions that user can take during encryption
 /// </summary>
-enum CipherAction {
+enum class CipherAction {
 	encrypt,
 	decrypt,
 };

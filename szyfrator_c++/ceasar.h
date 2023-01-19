@@ -3,7 +3,7 @@
 /// <summary>
 /// Specifies direction in wich the CeasarCipher's offset goes
 /// </summary>
-enum Direction {
+enum class Direction {
 	left = -1,
 	right = 1,
 };

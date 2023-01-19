@@ -26,11 +26,13 @@ std::string CeasarCipher::encrypt(const std::string& txt) {
 	std::string result{};
 	for (char letter : txt) {
 		if (CeasarCipher::is_in(letter)) {
-			char new_letter = letter + CeasarCipher::offset_ * CeasarCipher::direction_;
+			char new_letter = 
+				letter + CeasarCipher::offset_ * static_cast<int>(CeasarCipher::direction_);
 			result.push_back(new_letter);
 		}
 		else if (CeasarCipher::is_out(letter)) {
-			char new_letter = letter + (CeasarCipher::offset_ - 26) * CeasarCipher::direction_;
+			char new_letter = letter + 
+				(CeasarCipher::offset_ - 26) * static_cast<int>(CeasarCipher::direction_);
 			result.push_back(new_letter);
 		}
 		else {

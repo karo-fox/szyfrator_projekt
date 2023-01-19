@@ -21,13 +21,13 @@ std::map<LangCode, std::string> polish{
 	{ LangCode::choose_language, "Wybierz jezyk" },
 	// screen actions codes
 	{ LangCode::main_screen_actions, 
-		"settings: przejdz do ustawien\n"
-		"start: rozpocznij szyfrowanie lub rozszyfrowanie\n"
-		"quit: zakoncz dzialanie programu\n" },
+		"[settings]: przejdz do ustawien\n"
+		"[start]: rozpocznij szyfrowanie lub rozszyfrowanie\n"
+		"[quit]: zakoncz dzialanie programu\n" },
 	{ LangCode::settings_screen_actions, 
-		"language: zmien jezyk interfejsu\n"
-		"file: wlacz/wylacz zapisywanie do pliku\n"
-		"back: wroc do ekranu glownego\n" },
+		"[language]: zmien jezyk interfejsu\n"
+		"[file]: wlacz/wylacz zapisywanie do pliku\n"
+		"[back]: wroc do ekranu glownego\n" },
 	{ LangCode::available_screen_actions, "Dostepne akcje" },
 	{ LangCode::choose_screen_action, "Wybierz akcje" },
 	{ LangCode::action_not_found, 
@@ -35,7 +35,7 @@ std::map<LangCode, std::string> polish{
 	// cipher choice codes
 	{ LangCode::choose_cipher, "Wybierz jeden z nastepujacych szyfrow" },
 	{ LangCode::available_ciphers,
-		"ceasar: Szyfr Cezara\n" },
+		"[ceasar]: Szyfr Cezara\n" },
 	// other encryption codes
 	{ LangCode::result, "Twoj wynik" },
 	{ LangCode::encrypt_decrypt, "Chcesz zaszyfrowac czy odszyfrowac?" },

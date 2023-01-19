@@ -34,7 +34,7 @@ void ScreenCommunicator::show_actions() const {
 
 std::string ScreenCommunicator::get_action() const {
 	while (true) {
-		ui_.show_text(ui_.parse(LangCode::choose_screen_action));
+		ui_.show_text(ui_.parse(LangCode::choose_screen_action) + ": ");
 		std::string input = ui_.text_input();
 		try {
 			validate_not_empty(input);

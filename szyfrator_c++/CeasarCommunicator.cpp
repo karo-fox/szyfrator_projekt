@@ -7,7 +7,7 @@
 
 int CeasarCommunicator::set_offset() const {
 	while (true) {
-		ui_.show_text(ui_.parse(LangCode::set_offset));
+		ui_.show_text(ui_.parse(LangCode::set_offset) + " [0 - 26]:");
 		int offset = ui_.integer_input();
 		try {
 			validate_not_0(offset);
@@ -23,7 +23,7 @@ int CeasarCommunicator::set_offset() const {
 
 Direction CeasarCommunicator::set_direction() const {
 	while (true) {
-		ui_.show_text(ui_.parse(LangCode::set_direction));
+		ui_.show_text(ui_.parse(LangCode::set_direction) + "[left/right]:");
 		std::string input = ui_.text_input();
 		try {
 			validate_not_empty(input);

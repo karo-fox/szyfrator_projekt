@@ -21,13 +21,13 @@ std::map<LangCode, std::string> english{
 	{ LangCode::choose_language, "Choose language" },
 	// screen actions codes
 	{ LangCode::main_screen_actions,
-		"settings: go to settings\n"
-		"start: encrypt or decrypt message\n"
-		"quit: quit\n" },
+		"[settings]: go to settings\n"
+		"[start]: encrypt or decrypt message\n"
+		"[quit]: quit\n" },
 	{ LangCode::settings_screen_actions,
-		"language: change interface langauge\n"
-		"file: enable / disable saving to file\n"
-		"back: return to main screen\n" },
+		"[language]: change interface langauge\n"
+		"[file]: enable / disable saving to file\n"
+		"[back]: return to main screen\n" },
 	{ LangCode::available_screen_actions, "Available actions" },
 	{ LangCode::choose_screen_action, "Choose action" },
 	{ LangCode::action_not_found,
@@ -35,14 +35,14 @@ std::map<LangCode, std::string> english{
 	// cipher choice codes
 	{ LangCode::choose_cipher, "Choose one of the following ciphers" },
 	{ LangCode::available_ciphers,
-		"ceasar: Ceasar's cipher\n" },
+		"[ceasar]: Ceasar's cipher\n" },
 	// other encryption codes
 	{ LangCode::result, "Your result" },
 	{ LangCode::provide_message, "Provide a message" },
 	{ LangCode::encrypt_decrypt, "Do you want to encrypt or decrypt?" },
 	// ceasar's settings codes
 	{ LangCode::set_offset, "Set offset" },
-	{ LangCode::set_direction, "Set direction (right or left)" },
+	{ LangCode::set_direction, "Set direction" },
 	// validation codes
 	{ LangCode::v_max_length, "Cannot exceed max length, max length" },
 	{ LangCode::v_not_empty, "Cannot be empty" },

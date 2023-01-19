@@ -8,7 +8,7 @@
 
 CipherAction MainScreenCommunicator::get_cipher_action() const {
     while (true) {
-        ui_.show_text(ui_.parse(LangCode::encrypt_decrypt));
+        ui_.show_text(ui_.parse(LangCode::encrypt_decrypt) + " [encrypt/decrypt]:");
         std::string input = ui_.text_input();
         try {
             validate_not_empty(input);
@@ -28,7 +28,7 @@ CipherAction MainScreenCommunicator::get_cipher_action() const {
 
 std::string MainScreenCommunicator::get_message() const {
     while (true) {
-        ui_.show_text(ui_.parse(LangCode::provide_message));
+        ui_.show_text(ui_.parse(LangCode::provide_message) + ": ");
         std::string input = ui_.text_input();
         try {
             validate_not_empty(input);
@@ -62,7 +62,7 @@ Cipher MainScreenCommunicator::get_cipher() const {
 void MainScreenCommunicator::show_output(const std::string& output) const {
     try {
         validate_not_empty(output);
-        ui_.show_text(ui_.parse(LangCode::result));
+        ui_.show_text(ui_.parse(LangCode::result) + ": ");
         ui_.show_text(output);
     }
     catch (const ValidationException<std::string>& e) {
@@ -72,6 +72,6 @@ void MainScreenCommunicator::show_output(const std::string& output) const {
 }
 
 void MainScreenCommunicator::wait() const {
-    ui_.show_text(ui_.parse(LangCode::key_continue));
+    ui_.show_text(ui_.parse(LangCode::key_continue) + ": ");
     ui_.text_input();
 }

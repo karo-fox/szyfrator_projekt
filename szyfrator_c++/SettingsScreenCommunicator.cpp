@@ -8,7 +8,7 @@
 Language SettingsScreenCommunicator::get_language() const {
 	while (true) {
 		ui_.show_text(
-			ui_.parse(LangCode::choose_language) + "\npl - Polski\nen - English"
+			ui_.parse(LangCode::choose_language) + "\n[pl] - Polski\n[en] - English"
 		);
 		std::string input = ui_.text_input();
 		try {

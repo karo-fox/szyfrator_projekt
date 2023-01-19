@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <vector>
 
 #include "Settings.h"
 #include "lang.h"
@@ -17,8 +18,11 @@ public:
 	UserInterface() : translations_{ setup_lang_() } {};
 
 	Settings settings_{};
-
+	
 	std::string parse(LangCode code) const;
+
+	template <typename T>
+	std::string parse(LangCode code, std::vector<T> args) const;
 
 	/// <summary>
 	/// Gets text input from user
@@ -43,4 +47,6 @@ public:
 	/// </summary>
 	/// <param name="text">Text to show</param>
 	virtual void show_text(const std::string& text) const = 0;
+
+	friend class Parsable;
 };

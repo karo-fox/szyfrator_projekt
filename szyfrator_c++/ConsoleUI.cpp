@@ -2,6 +2,7 @@
 #include <iostream>
 
 #include "ConsoleUI.h"
+#include "lang.h"
 
 void ConsoleUI::ignore_line() const {
 	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -17,7 +18,7 @@ T ConsoleUI::safe_input(const std::string& prompt) const {
 		if (!std::cin) {
 			std::cin.clear();
 			ignore_line();
-			std::cout << "Invalid input. Try again. \n";
+			std::cout << parse(LangCode::invalid_input) << '\n';
 		}
 		else {
 			ignore_line();
@@ -51,10 +52,10 @@ bool ConsoleUI::bool_input() const {
 		else if (input == "n" || input == "N") {
 			return false;
 		}
-		std::cout << "Invalid input. Try again\n";
+		std::cout << parse(LangCode::invalid_input) << '\n';
 	}	
 }
 
 void ConsoleUI::show_text(const std::string& text) const {
-	std::cout << text << '\n';
+	std::cout << '\n' << text << '\n';
 }

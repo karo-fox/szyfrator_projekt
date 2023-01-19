@@ -4,10 +4,11 @@
 #include "ciphers.h"
 #include "validators.h"
 #include "ValidationException.h"
+#include "lang.h"
 
 CipherAction MainScreenCommunicator::get_cipher_action() const {
     while (true) {
-        ui_.show_text("Do you want to encrypt or decrypt?");
+        ui_.show_text(ui_.parse(LangCode::encrypt_decrypt));
         std::string input = ui_.text_input();
         try {
             validate_not_empty(input);
@@ -20,14 +21,14 @@ CipherAction MainScreenCommunicator::get_cipher_action() const {
             }
         }
         catch (const ValidationException<std::string>& e) {
-            ui_.show_text(e.what());
+            ui_.show_text(ui_.parse(e.msg_code_, e.validation_args_));
         }
     }
 }
 
 std::string MainScreenCommunicator::get_message() const {
     while (true) {
-        ui_.show_text("Provide a message:");
+        ui_.show_text(ui_.parse(LangCode::provide_message));
         std::string input = ui_.text_input();
         try {
             validate_not_empty(input);
@@ -35,14 +36,15 @@ std::string MainScreenCommunicator::get_message() const {
             return input;
         }
         catch (const ValidationException<std::string>& e) {
-            ui_.show_text(e.what());
+            ui_.show_text(ui_.parse(e.msg_code_, e.validation_args_));
         }
    }
 }
 
 Cipher MainScreenCommunicator::get_cipher() const {
     while (true) {
-        ui_.show_text("Choose one of the following ciphers:\nceasar");
+        ui_.show_text(ui_.parse(LangCode::choose_cipher));
+        ui_.show_text(ui_.parse(LangCode::available_ciphers));
         std::string input = ui_.text_input();
         try {
             validate_not_empty(input);
@@ -52,7 +54,7 @@ Cipher MainScreenCommunicator::get_cipher() const {
             }
         }
         catch (const ValidationException<std::string>& e) {
-            ui_.show_text(e.what());
+            ui_.show_text(ui_.parse(e.msg_code_, e.validation_args_));
         }
     }
 }
@@ -60,11 +62,11 @@ Cipher MainScreenCommunicator::get_cipher() const {
 void MainScreenCommunicator::show_output(const std::string& output) const {
     try {
         validate_not_empty(output);
-        ui_.show_text("Your result:");
+        ui_.show_text(ui_.parse(LangCode::result));
         ui_.show_text(output);
     }
     catch (const ValidationException<std::string>& e) {
-        ui_.show_text(e.what());
+        ui_.show_text(ui_.parse(e.msg_code_, e.validation_args_));
     }
     
 }

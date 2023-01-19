@@ -22,7 +22,7 @@ Language SettingsScreenCommunicator::get_language() const {
 			}
 		}
 		catch (const ValidationException<std::string>& e) {
-			ui_.show_text(e.what());
+			ui_.show_text(ui_.parse(e.msg_code_, e.validation_args_));
 		}
 	}
 };

@@ -128,9 +128,6 @@
     <ClInclude Include="validators.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ValidationException.h">
-      <Filter>Header Files\Exceptions</Filter>
-    </ClInclude>
     <ClInclude Include="ciphers.h">
       <Filter>Header Files\Ciphers</Filter>
     </ClInclude>
@@ -147,9 +144,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Settings.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Communicator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="lang.h">
@@ -175,6 +169,12 @@
     </ClInclude>
     <ClInclude Include="ScreenCommunicator.h">
       <Filter>Header Files\UI\screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ValidationException.h">
+      <Filter>Header Files\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="Communicator.h">
+      <Filter>Header Files\UI</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

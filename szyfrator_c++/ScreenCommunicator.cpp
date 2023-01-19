@@ -28,13 +28,13 @@ void ScreenCommunicator::show_title(const std::string& title) const {
 }
 
 void ScreenCommunicator::show_actions() const {
-	ui_.show_text(ui_.parse(LangCode::available_actions));
+	ui_.show_text(ui_.parse(LangCode::available_screen_actions));
 	ui_.show_text(ui_.parse(actions_prompt_code_));
 }
 
 std::string ScreenCommunicator::get_action() const {
 	while (true) {
-		ui_.show_text(ui_.parse(LangCode::choose_action));
+		ui_.show_text(ui_.parse(LangCode::choose_screen_action));
 		std::string input = ui_.text_input();
 		try {
 			validate_not_empty(input);
@@ -42,11 +42,11 @@ std::string ScreenCommunicator::get_action() const {
 			return input;
 		}
 		catch (const ValidationException<std::string>& e) {
-			ui_.show_text(e.what());
+			ui_.show_text(ui_.parse(e.msg_code_, e.validation_args_));
 		}
 	}
 }
 
 void ScreenCommunicator::action_not_found() const {
-	ui_.show_text(ui_.parse(LangCode::action_not_found));
+	 ui_.show_text(ui_.parse(LangCode::action_not_found));
 }

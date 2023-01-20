@@ -15,6 +15,8 @@ std::map<LangCode, std::string> english{
 	// screen titles codes
 	{ LangCode::main_title, "Main Menu" },
 	{ LangCode::settings_title, "Settings" },
+	// main screen codes
+	{ LangCode::file_saved, "Successfully saved result to file" },
 	// setttings screen codes
 	{ LangCode::show_language, "Language" },
 	{ LangCode::save_to_file, "Save to file" },

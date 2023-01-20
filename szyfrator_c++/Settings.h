@@ -9,5 +9,5 @@
 /// </summary>
 struct Settings {
 	Language lang{ Language::en };
-	bool save_to_file_{ true };
+	bool save_to_file_{ false };
 };

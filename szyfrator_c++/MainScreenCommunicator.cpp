@@ -71,6 +71,10 @@ void MainScreenCommunicator::show_output(const std::string& output) const {
     
 }
 
+void MainScreenCommunicator::show_save_to_file() const {
+    ui_.show_text(ui_.parse(LangCode::file_saved));
+}
+
 void MainScreenCommunicator::wait() const {
     ui_.show_text(ui_.parse(LangCode::key_continue) + ": ");
     ui_.text_input();

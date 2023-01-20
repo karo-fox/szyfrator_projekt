@@ -15,6 +15,8 @@ std::map<LangCode, std::string> polish{
 	// screen titles codes
 	{ LangCode::main_title, "Szyfrator" },
 	{ LangCode::settings_title, "Ustawienia" },
+	// main screen codes
+	{ LangCode::file_saved, "Poprawnie zapisano wynik do pliku" },
 	// settings screen codes
 	{ LangCode::show_language, "Jezyk" },
 	{ LangCode::save_to_file, "Zapis do pliku" },

@@ -20,4 +20,6 @@ public:
 	/// </summary>
 	/// <returns>New language to be set</returns>
 	Language get_language() const;
+
+	LangCode get_save_to_file_code_() const;
 };

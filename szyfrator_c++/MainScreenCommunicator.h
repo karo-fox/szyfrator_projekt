@@ -23,5 +23,7 @@ public:
 
 	void show_output(const std::string& output) const;
 
+	void show_save_to_file() const;
+
 	void wait() const;
 };

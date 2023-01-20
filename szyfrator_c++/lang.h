@@ -12,6 +12,8 @@ enum class LangCode {
 	// screen titles codes
 	main_title,
 	settings_title,
+	// main screen codes
+	file_saved,
 	// settings screen codes
 	show_language,
 	save_to_file,

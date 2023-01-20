@@ -9,7 +9,7 @@ ScreenType SettingsScreen::run() const {
 	std::string title = ui_.parse(LangCode::settings_title) + '\n' + 
 		ui_.parse(LangCode::show_language) + ": " + ui_.parse(LangCode::current_language) + 
 		'\n' + ui_.parse(LangCode::save_to_file) + ": " + 
-		ui_.parse(LangCode::no);
+		ui_.parse(communicator_.get_save_to_file_code_());
 	communicator_.show_title(title);
 	while (true) {
 		communicator_.show_actions();

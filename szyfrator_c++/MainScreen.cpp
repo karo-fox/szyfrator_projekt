@@ -17,6 +17,7 @@ ScreenType MainScreen::run() const {
 			communicator_.show_output(result);
 			if (ui_.settings_.save_to_file_) {
 				file_manager_.save_to_file_(result);
+				communicator_.show_save_to_file();
 			}
 			communicator_.wait();
 			return ScreenType::stay;

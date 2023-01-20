@@ -5,6 +5,13 @@
 #include "validators.h"
 #include "ValidationException.h"
 
+LangCode SettingsScreenCommunicator::get_save_to_file_code_() const {
+	if (ui_.settings_.save_to_file_) {
+		return LangCode::yes;
+	}
+	return LangCode::no;
+}
+
 Language SettingsScreenCommunicator::get_language() const {
 	while (true) {
 		ui_.show_text(

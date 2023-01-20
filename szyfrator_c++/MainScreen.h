@@ -8,6 +8,7 @@
 #include "MainScreenCommunicator.h"
 
 #include "EncryptionContext.h"
+#include "FileManager.h"
 
 /// <summary>
 /// Main Screen for the program
@@ -21,9 +22,18 @@ private:
 
 	const MainScreenCommunicator communicator_;
 	EncryptionContext& context_;
+	const FileManager& file_manager_;
 public:
-	MainScreen(UserInterface& ui, EncryptionContext& context)
-		: Screen{ ui }, communicator_{ ui }, context_{ context } {};
+	MainScreen(
+		UserInterface& ui, 
+		EncryptionContext& context, 
+		const FileManager& file_manager
+	) : 
+		Screen{ ui }, 
+		communicator_{ ui }, 
+		context_{ context }, 
+		file_manager_{ file_manager } 
+	{};
 	/// <summary>
 	/// Presents some actions for user to take:
 	/// - go to settings
@@ -33,7 +43,7 @@ public:
 	/// <returns>Screen that should be run next</returns>
 	ScreenType run() const override;
 
-	void start_encryption() const;
+	std::string start_encryption() const;
 
 	void provide_cipher(Cipher cipher_code) const;
 };

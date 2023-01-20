@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <format>
+#include <filesystem>
 
 #include "FileManager.h"
 #include "FileException.h"
@@ -21,6 +22,10 @@ std::ofstream FileManager::create_new_write_file_() const {
 		throw FileException("Could not create a file", file);
 	}
 	return file;
+}
+
+FileManager::FileManager() {
+	std::filesystem::create_directory(FileManager::directory_);
 }
 
 void FileManager::save_to_file_(std::string content) const {

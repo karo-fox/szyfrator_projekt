@@ -10,6 +10,7 @@
 #include "UserInterface.h"
 
 #include "EncryptionContext.h"
+#include "FileManager.h"
 
 /// <summary>
 /// Controls which Screen is presented to the user
@@ -31,7 +32,9 @@ public:
 	/// and pushes Main Screen on top of the screen_stack_
 	/// </summary>
 	/// <param name="ui">User Interface for Screen initialization</param>
-	ScreenController(UserInterface& ui, EncryptionContext& context);
+	ScreenController(
+		UserInterface& ui, EncryptionContext& context, const FileManager& file_manager
+	);
 
 	/// <summary>
 	/// Runs Screens in a loop

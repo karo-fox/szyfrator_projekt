@@ -13,7 +13,11 @@ ScreenType MainScreen::run() const {
 		communicator_.show_actions();
 		std::string input = communicator_.get_action();
 		if (input == "start") {
-			start_encryption();
+			std::string result{ start_encryption() };
+			communicator_.show_output(result);
+			if (ui_.settings_.save_to_file_) {
+				file_manager_.save_to_file_(result);
+			}
 			communicator_.wait();
 			return ScreenType::stay;
 		}
@@ -30,7 +34,7 @@ ScreenType MainScreen::run() const {
 	}
 }
 
-void MainScreen::start_encryption() const {
+std::string MainScreen::start_encryption() const {
 	CipherAction action = communicator_.get_cipher_action();
 	std::string message = communicator_.get_message();
 	Cipher cipher_code = communicator_.get_cipher();
@@ -42,7 +46,7 @@ void MainScreen::start_encryption() const {
 	else if (action == CipherAction::decrypt) {
 		output = context_.decrypt_message(message);
 	}
-	communicator_.show_output(output);
+	return output;
 }
 
 void MainScreen::provide_cipher(Cipher cipher_code) const {

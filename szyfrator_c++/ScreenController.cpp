@@ -10,10 +10,13 @@
 #include "SettingsScreen.h"
 #include "UserInterface.h"
 #include "EncryptionContext.h"
+#include "FileManager.h"
 
 
-ScreenController::ScreenController(UserInterface& ui, EncryptionContext& context) {
-	auto main = MainScreen{ ui, context };
+ScreenController::ScreenController(
+	UserInterface& ui, EncryptionContext& context, const FileManager& file_manager
+) {
+	auto main = MainScreen{ ui, context , file_manager};
 	ScreenController::screens_.insert(
 		std::make_pair(ScreenType::main_menu, std::make_shared<MainScreen>(main))
 	);

@@ -132,6 +132,7 @@
     <ClCompile Include="CeasarCommunicator.cpp" />
     <ClCompile Include="EncryptionContext.cpp" />
     <ClCompile Include="ConsoleUI.cpp" />
+    <ClCompile Include="FileManager.cpp" />
     <ClCompile Include="MainScreenCommunicator.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainScreen.cpp" />
@@ -154,6 +155,8 @@
     <ClInclude Include="en.h" />
     <ClInclude Include="EncryptionContext.h" />
     <ClInclude Include="ConsoleUI.h" />
+    <ClInclude Include="FileException.h" />
+    <ClInclude Include="FileManager.h" />
     <ClInclude Include="lang.h" />
     <ClInclude Include="MainScreenCommunicator.h" />
     <ClInclude Include="pl.h" />

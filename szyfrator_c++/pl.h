@@ -38,7 +38,8 @@ std::map<LangCode, std::string> polish{
 	{ LangCode::choose_cipher, "Wybierz jeden z nastepujacych szyfrow" },
 	{ LangCode::available_ciphers,
 		"[ceasar]: Szyfr Cezara\n"
-		"[four square]: szyfr \"cztery kwadraty\"" },
+		"[four square]: Szyfr \"cztery kwadraty\"\n"
+		"[vigenere]: Szyfr Vigenere'a" },
 	// other encryption codes
 	{ LangCode::result, "Twoj wynik" },
 	{ LangCode::encrypt_decrypt, "Chcesz zaszyfrowac czy odszyfrowac?" },

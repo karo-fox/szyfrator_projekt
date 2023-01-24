@@ -3,7 +3,7 @@
 #include <memory>
 
 #include "CipherStrategy.h"
-#include "UserInterface.h"
+#include "CipherCommunicator.h"
 #include "setup.h"
 
 /// <summary>
@@ -14,8 +14,15 @@ private:
 	// use move semantics so it can dynamically change active_cipher_
 	std::unique_ptr<CipherStrategy> active_cipher_;
 
+	const CipherCommunicator communicator_;
 public:
-	EncryptionContext(std::unique_ptr<CipherStrategy> &&cipher)	: active_cipher_{std::move(cipher)} {};
+	EncryptionContext(
+		std::unique_ptr<CipherStrategy> &&cipher, 
+		const CipherCommunicator communicator
+	) : 
+		active_cipher_{ std::move(cipher) }, 
+		communicator_{ communicator }
+	{};
 
 	/// <summary>
 	/// Sets new active cipher

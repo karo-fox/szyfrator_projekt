@@ -5,7 +5,8 @@
 /// </summary>
 enum class Cipher {
 	ceasar,
-	four_square
+	four_square,
+	vigenere,
 };
 
 /// <summary>

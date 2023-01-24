@@ -6,10 +6,10 @@
 #include "four_square.h"
 #include "UserInterface.h"
 #include "CipherStrategy.h"
-#include "FourSquareCommunicator.h"
+#include "CipherCommunicator.h"
 #include "utils.h"
 
-FourSquareCipher::FourSquareCipher(UserInterface& ui) : communicator_{ ui } {
+FourSquareCipher::FourSquareCipher() {
 	FourSquareCipher::reset_settings();
 }
 
@@ -24,20 +24,20 @@ void FourSquareCipher::reset_settings() {
 	settings_ = false;
 }
 
-void FourSquareCipher::new_settings() {
-	keyword1_ = communicator_.set_keyword();
+void FourSquareCipher::new_settings(const CipherCommunicator& communicator) {
+	keyword1_ = communicator.set_keyword();
 	squares_.at(SquareCode::top_right) = SquareMatrix{ keyword1_ };
-	keyword2_ = communicator_.set_keyword();
+	keyword2_ = communicator.set_keyword();
 	squares_.at(SquareCode::bottom_left) = SquareMatrix{ keyword2_ };
 	settings_ = true;
 }
 
 std::string FourSquareCipher::encrypt(const std::string& txt) {
 	std::string result;
-	std::vector<std::string> ciphertext{ 
+	std::vector<std::string> plaintext{ 
 		split_in_pairs(remove_redundant_(str_to_lower(txt))) 
 	};
-	for (auto& str_pair : ciphertext) {
+	for (auto& str_pair : plaintext) {
 		auto letter1_xy{ 
 			FourSquareCipher::squares_.at(SquareCode::top_left).find(str_pair.at(0))
 		};
@@ -61,10 +61,10 @@ std::string FourSquareCipher::encrypt(const std::string& txt) {
 
 std::string FourSquareCipher::decrypt(const std::string& txt) {
 	std::string result;
-	std::vector<std::string> ciphertext{ 
+	std::vector<std::string> plaintext{ 
 		split_in_pairs(remove_redundant_(str_to_lower(txt))) 
 	};
-	for (auto& str_pair : ciphertext) {
+	for (auto& str_pair : plaintext) {
 		auto letter1_xy{
 			FourSquareCipher::squares_.at(SquareCode::top_right).find(str_pair.at(0))
 		};

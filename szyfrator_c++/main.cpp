@@ -13,11 +13,15 @@
 #include "EncryptionContext.h"
 #include "CipherStrategy.h"
 #include "CeasarCipher.h"
+#include "CipherCommunicator.h"
 
 int main() {
 	ConsoleUI ui{};
-	std::map<Cipher, CipherStrategy&> ciphers{ setup_ciphers(ui) };
-	EncryptionContext context{ std::make_unique<CeasarCipher>(CeasarCipher{ui}) }; // initialize with default cipher
+	//std::map<Cipher, CipherStrategy&> ciphers{ setup_ciphers(ui) };
+	const CipherCommunicator communicator{ ui };
+	EncryptionContext context{ 
+		std::make_unique<CeasarCipher>(CeasarCipher{}), communicator 
+	}; // initialize with default cipher
 
 	const FileManager file_manager{};
 

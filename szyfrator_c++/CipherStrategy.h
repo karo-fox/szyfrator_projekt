@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-#include "Communicator.h"
+#include "CipherCommunicator.h"
 
 /// <summary>
 /// Abract class for ciphers
@@ -25,7 +25,7 @@ public:
 	/// <summary>
 	/// Asks user for new cipher settings
 	/// </summary>
-	virtual void new_settings() = 0;
+	virtual void new_settings(const CipherCommunicator& communicator) = 0;
 
 	/// <summary>
 	/// Resets the cipher settings to default

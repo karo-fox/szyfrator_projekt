@@ -61,6 +61,12 @@
     <Filter Include="Source Files\Ciphers\FourSquareCipher">
       <UniqueIdentifier>{58f97dd9-adf2-4b3c-bd4d-faa0e9a54748}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Ciphers\VigenereCipher">
+      <UniqueIdentifier>{2c415c36-d8d9-4152-b789-81efc442e7b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Ciphers\VigenereCipher">
+      <UniqueIdentifier>{44db2492-f1db-4c32-87b4-2170e5f66509}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -73,9 +79,6 @@
       <Filter>Source Files\Ciphers</Filter>
     </ClCompile>
     <ClCompile Include="CeasarCipher.cpp">
-      <Filter>Source Files\Ciphers\CeasarCipher</Filter>
-    </ClCompile>
-    <ClCompile Include="CeasarCommunicator.cpp">
       <Filter>Source Files\Ciphers\CeasarCipher</Filter>
     </ClCompile>
     <ClCompile Include="validators.cpp">
@@ -117,8 +120,11 @@
     <ClCompile Include="SquareMatrix.cpp">
       <Filter>Source Files\Ciphers\FourSquareCipher</Filter>
     </ClCompile>
-    <ClCompile Include="FourSquareCommunicator.cpp">
-      <Filter>Source Files\Ciphers\FourSquareCipher</Filter>
+    <ClCompile Include="VigenereCipher.cpp">
+      <Filter>Source Files\Ciphers\VigenereCipher</Filter>
+    </ClCompile>
+    <ClCompile Include="CipherCommunicator.cpp">
+      <Filter>Source Files\Ciphers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -138,9 +144,6 @@
       <Filter>Header Files\Ciphers\CeasarCipher</Filter>
     </ClInclude>
     <ClInclude Include="CeasarCipher.h">
-      <Filter>Header Files\Ciphers\CeasarCipher</Filter>
-    </ClInclude>
-    <ClInclude Include="CeasarCommunicator.h">
       <Filter>Header Files\Ciphers\CeasarCipher</Filter>
     </ClInclude>
     <ClInclude Include="validators.h">
@@ -206,11 +209,17 @@
     <ClInclude Include="four_square.h">
       <Filter>Header Files\Ciphers\FourSquareCipher</Filter>
     </ClInclude>
-    <ClInclude Include="FourSquareCommunicator.h">
-      <Filter>Header Files\Ciphers\FourSquareCipher</Filter>
-    </ClInclude>
     <ClInclude Include="Exception.h">
       <Filter>Header Files\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="VigenereCipher.h">
+      <Filter>Header Files\Ciphers\VigenereCipher</Filter>
+    </ClInclude>
+    <ClInclude Include="VigenereCommunicator.h">
+      <Filter>Header Files\Ciphers\VigenereCipher</Filter>
+    </ClInclude>
+    <ClInclude Include="CipherCommunicator.h">
+      <Filter>Header Files\Ciphers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

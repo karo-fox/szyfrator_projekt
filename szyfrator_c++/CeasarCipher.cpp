@@ -1,17 +1,18 @@
 #include <string>
+#include <cassert>
+
 #include "CeasarCipher.h"
 #include "UserInterface.h"
-#include "CeasarCommunicator.h"
+#include "CipherCommunicator.h"
 #include "ceasar.h"
 
-CeasarCipher::CeasarCipher(UserInterface& ui)
-	: communicator_{ ui } {
+CeasarCipher::CeasarCipher() {
 	CeasarCipher::reset_settings();
 }
 
-void CeasarCipher::new_settings() {
-	CeasarCipher::offset_ = communicator_.set_offset();
-	CeasarCipher::direction_ = communicator_.set_direction();
+void CeasarCipher::new_settings(const CipherCommunicator& communicator) {
+	CeasarCipher::offset_ = communicator.set_offset();
+	CeasarCipher::direction_ = communicator.set_direction();
 	CeasarCipher::settings_ = true; // you should assert this somehow
 }
 
@@ -70,3 +71,12 @@ bool CeasarCipher::is_out_(char letter) const {
 }
 
 
+void CeasarCipher::set_new_offset(int offset) {
+	assert(offset >= 0);
+	assert(offset <= 26);
+	CeasarCipher::offset_ = offset;
+}
+
+void CeasarCipher::set_new_direction(Direction direction) {
+	CeasarCipher::direction_ = direction;
+}

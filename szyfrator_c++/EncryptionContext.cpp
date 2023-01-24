@@ -6,11 +6,11 @@ void EncryptionContext::set_cipher(std::unique_ptr<CipherStrategy> &&cipher) {
 }
 
 std::string EncryptionContext::encrypt_message(const std::string& message) const {
-	active_cipher_.get()->new_settings();
+	active_cipher_.get()->new_settings(communicator_);
 	return active_cipher_->encrypt(message);
 }
 
 std::string EncryptionContext::decrypt_message(const std::string& message) const {
-	active_cipher_.get()->new_settings();
+	active_cipher_.get()->new_settings(communicator_);
 	return active_cipher_->decrypt(message);
 }

@@ -3,7 +3,7 @@
 #include <string>
 #include "CipherStrategy.h"
 #include "UserInterface.h"
-#include "CeasarCommunicator.h"
+#include "CipherCommunicator.h"
 #include "ceasar.h"
 
 /// <summary>
@@ -31,12 +31,6 @@ private:
 	bool settings_;
 
 	/// <summary>
-	/// Communicator responsible for getting settings from user
-	/// </summary>
-	const CeasarCommunicator communicator_;
-
-
-	/// <summary>
 	/// Checks if the replacing letter does not exceed alphabet range
 	/// </summary>
 	/// <param name="letter">Replacing letter</param>
@@ -51,9 +45,12 @@ private:
 	bool is_out_(char letter) const;
 
 public:
-	CeasarCipher(UserInterface& ui);
-	void new_settings() override;
+	CeasarCipher();
+	void new_settings(const CipherCommunicator& communicator) override;
 	void reset_settings() override;
 	std::string encrypt(const std::string& txt) override;
 	std::string decrypt(const std::string& txt) override;
+
+	void set_new_offset(int offset);
+	void set_new_direction(Direction direction);
 };

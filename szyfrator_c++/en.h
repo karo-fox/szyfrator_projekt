@@ -38,7 +38,8 @@ std::map<LangCode, std::string> english{
 	{ LangCode::choose_cipher, "Choose one of the following ciphers" },
 	{ LangCode::available_ciphers,
 		"[ceasar]: Ceasar's cipher\n"
-		"[four square]: Four Square cipher" },
+		"[four square]: Four Square cipher\n"
+		"[vigenere]: Vigenere's Cipher" },
 	// other encryption codes
 	{ LangCode::result, "Your result" },
 	{ LangCode::provide_message, "Provide a message" },

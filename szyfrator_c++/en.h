@@ -37,7 +37,8 @@ std::map<LangCode, std::string> english{
 	// cipher choice codes
 	{ LangCode::choose_cipher, "Choose one of the following ciphers" },
 	{ LangCode::available_ciphers,
-		"[ceasar]: Ceasar's cipher\n" },
+		"[ceasar]: Ceasar's cipher\n"
+		"[four square]: Four Square cipher" },
 	// other encryption codes
 	{ LangCode::result, "Your result" },
 	{ LangCode::provide_message, "Provide a message" },
@@ -45,6 +46,8 @@ std::map<LangCode, std::string> english{
 	// ceasar's settings codes
 	{ LangCode::set_offset, "Set offset" },
 	{ LangCode::set_direction, "Set direction" },
+	// four square's settings codes
+	{ LangCode::set_keyword, "Set keyword" },
 	// validation codes
 	{ LangCode::v_max_length, "Cannot exceed max length, max length" },
 	{ LangCode::v_not_empty, "Cannot be empty" },

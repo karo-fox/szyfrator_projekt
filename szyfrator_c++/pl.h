@@ -37,7 +37,8 @@ std::map<LangCode, std::string> polish{
 	// cipher choice codes
 	{ LangCode::choose_cipher, "Wybierz jeden z nastepujacych szyfrow" },
 	{ LangCode::available_ciphers,
-		"[ceasar]: Szyfr Cezara\n" },
+		"[ceasar]: Szyfr Cezara\n"
+		"[four square]: szyfr \"cztery kwadraty\"" },
 	// other encryption codes
 	{ LangCode::result, "Twoj wynik" },
 	{ LangCode::encrypt_decrypt, "Chcesz zaszyfrowac czy odszyfrowac?" },
@@ -45,6 +46,8 @@ std::map<LangCode, std::string> polish{
 	// ceasar's settings codes
 	{ LangCode::set_offset, "Ustaw przesuniecie" },
 	{ LangCode::set_direction, "Ustaw kierunek" },
+	// four square's settings codes
+	{ LangCode::set_keyword, "Ustaw slowo kluczowe" },
 	// validation messages codes
 	{ LangCode::v_max_length, 
 		"Nie moze przekroczyc maksymalnej dlugosci, maksymalna dlugosc" },

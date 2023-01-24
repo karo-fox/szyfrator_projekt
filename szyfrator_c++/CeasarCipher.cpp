@@ -25,12 +25,12 @@ void CeasarCipher::reset_settings() {
 std::string CeasarCipher::encrypt(const std::string& txt) {
 	std::string result{};
 	for (char letter : txt) {
-		if (CeasarCipher::is_in(letter)) {
+		if (CeasarCipher::is_in_(letter)) {
 			char new_letter = 
 				letter + CeasarCipher::offset_ * static_cast<int>(CeasarCipher::direction_);
 			result.push_back(new_letter);
 		}
-		else if (CeasarCipher::is_out(letter)) {
+		else if (CeasarCipher::is_out_(letter)) {
 			char new_letter = letter + 
 				(CeasarCipher::offset_ - 26) * static_cast<int>(CeasarCipher::direction_);
 			result.push_back(new_letter);
@@ -47,7 +47,7 @@ std::string CeasarCipher::decrypt(const std::string& txt) {
 	return CeasarCipher::encrypt(txt);
 }
 
-bool CeasarCipher::is_in(char letter) const {
+bool CeasarCipher::is_in_(char letter) const {
 	if (CeasarCipher::direction_ == Direction::right) {
 		return (letter >= 65 && letter <= 90 - CeasarCipher::offset_)
 			|| (letter >= 97 && letter <= 122 - CeasarCipher::offset_);
@@ -58,7 +58,7 @@ bool CeasarCipher::is_in(char letter) const {
 	}
 }
 
-bool CeasarCipher::is_out(char letter) const {
+bool CeasarCipher::is_out_(char letter) const {
 	if (CeasarCipher::direction_ == Direction::right) {
 		return (letter > 90 - CeasarCipher::offset_ && letter <= 90)
 			|| (letter > 122 - CeasarCipher::offset_ && letter <= 122);

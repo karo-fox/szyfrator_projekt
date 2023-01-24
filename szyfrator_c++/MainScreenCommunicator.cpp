@@ -48,9 +48,12 @@ Cipher MainScreenCommunicator::get_cipher() const {
         std::string input = ui_.text_input();
         try {
             validate_not_empty(input);
-            validate_allowed(input, { "ceasar" });
+            validate_allowed(input, { "ceasar", "four square"});
             if (input == "ceasar") {
                 return Cipher::ceasar;
+            }
+            else if (input == "four square") {
+                return Cipher::four_square;
             }
         }
         catch (const ValidationException<std::string>& e) {

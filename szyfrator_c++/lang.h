@@ -34,6 +34,8 @@ enum class LangCode {
 	// ceasar's settings codes
 	set_offset,
 	set_direction,
+	// four square's settings codes
+	set_keyword,
 	// validation codes
 	v_max_length,
 	v_not_empty,

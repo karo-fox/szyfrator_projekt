@@ -6,6 +6,7 @@
 
 #include "ciphers.h"
 #include "CeasarCipher.h"
+#include "FourSquareCipher.h"
 
 ScreenType MainScreen::run() const {
 	communicator_.show_title(ui_.parse(LangCode::main_title));
@@ -54,6 +55,9 @@ void MainScreen::provide_cipher(Cipher cipher_code) const {
 	switch (cipher_code) {
 	case Cipher::ceasar:
 		context_.set_cipher(std::make_unique<CeasarCipher>(CeasarCipher{ ui_ }));
+		return;
+	case Cipher::four_square:
+		context_.set_cipher(std::make_unique<FourSquareCipher>(FourSquareCipher{ ui_ }));
 		return;
 	}
 }

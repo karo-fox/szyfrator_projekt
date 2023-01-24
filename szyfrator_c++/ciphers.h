@@ -4,7 +4,8 @@
 /// Available ciphers
 /// </summary>
 enum class Cipher {
-	ceasar
+	ceasar,
+	four_square
 };
 
 /// <summary>

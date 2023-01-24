@@ -41,14 +41,14 @@ private:
 	/// </summary>
 	/// <param name="letter">Replacing letter</param>
 	/// <returns>True if letter does not exceed range</returns>
-	bool is_in(char letter) const;
+	bool is_in_(char letter) const;
 
 	/// <summary>
 	/// Checks if the replacing letter does exceed alphabet range
 	/// </summary>
 	/// <param name="letter">Replacing letter</param>
 	/// <returns>True if letter does exceed range</returns>
-	bool is_out(char letter) const;
+	bool is_out_(char letter) const;
 
 public:
 	CeasarCipher(UserInterface& ui);

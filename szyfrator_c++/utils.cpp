@@ -19,3 +19,19 @@ std::vector<std::string> split_str(const std::string& str, char sep) {
 	}
 	return words;
 };
+
+std::vector<std::string> split_in_pairs(const std::string& str) {
+	std::vector<std::string> result;
+	for (int i{}; i < str.size(); i+=2) {
+		result.push_back(str.substr(i, 2));
+	}
+	return result;
+};
+
+std::string str_to_lower(const std::string& str) {
+	std::string result;
+	for (auto& letter : str) {
+		result.push_back(std::tolower(letter));
+	}
+	return result;
+}

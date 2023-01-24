@@ -133,6 +133,8 @@
     <ClCompile Include="EncryptionContext.cpp" />
     <ClCompile Include="ConsoleUI.cpp" />
     <ClCompile Include="FileManager.cpp" />
+    <ClCompile Include="FourSquareCipher.cpp" />
+    <ClCompile Include="FourSquareCommunicator.cpp" />
     <ClCompile Include="MainScreenCommunicator.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainScreen.cpp" />
@@ -141,6 +143,7 @@
     <ClCompile Include="SettingsScreen.cpp" />
     <ClCompile Include="SettingsScreenCommunicator.cpp" />
     <ClCompile Include="setup.cpp" />
+    <ClCompile Include="SquareMatrix.cpp" />
     <ClCompile Include="UserInterface.cpp" />
     <ClCompile Include="utils.cpp" />
     <ClCompile Include="validators.cpp" />
@@ -155,8 +158,12 @@
     <ClInclude Include="en.h" />
     <ClInclude Include="EncryptionContext.h" />
     <ClInclude Include="ConsoleUI.h" />
+    <ClInclude Include="Exception.h" />
     <ClInclude Include="FileException.h" />
     <ClInclude Include="FileManager.h" />
+    <ClInclude Include="FourSquareCipher.h" />
+    <ClInclude Include="FourSquareCommunicator.h" />
+    <ClInclude Include="four_square.h" />
     <ClInclude Include="lang.h" />
     <ClInclude Include="MainScreenCommunicator.h" />
     <ClInclude Include="pl.h" />

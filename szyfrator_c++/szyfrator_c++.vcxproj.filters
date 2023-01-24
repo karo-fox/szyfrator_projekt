@@ -55,6 +55,12 @@
     <Filter Include="Header Files\UI\screens\MainScreen">
       <UniqueIdentifier>{1432179a-debd-4052-aa68-feab943d8960}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Ciphers\FourSquareCipher">
+      <UniqueIdentifier>{b12ccfd4-3117-4720-934d-45decaf53147}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Ciphers\FourSquareCipher">
+      <UniqueIdentifier>{58f97dd9-adf2-4b3c-bd4d-faa0e9a54748}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -104,6 +110,15 @@
     </ClCompile>
     <ClCompile Include="FileManager.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FourSquareCipher.cpp">
+      <Filter>Source Files\Ciphers\FourSquareCipher</Filter>
+    </ClCompile>
+    <ClCompile Include="SquareMatrix.cpp">
+      <Filter>Source Files\Ciphers\FourSquareCipher</Filter>
+    </ClCompile>
+    <ClCompile Include="FourSquareCommunicator.cpp">
+      <Filter>Source Files\Ciphers\FourSquareCipher</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -183,6 +198,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FileException.h">
+      <Filter>Header Files\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="FourSquareCipher.h">
+      <Filter>Header Files\Ciphers\FourSquareCipher</Filter>
+    </ClInclude>
+    <ClInclude Include="four_square.h">
+      <Filter>Header Files\Ciphers\FourSquareCipher</Filter>
+    </ClInclude>
+    <ClInclude Include="FourSquareCommunicator.h">
+      <Filter>Header Files\Ciphers\FourSquareCipher</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception.h">
       <Filter>Header Files\Exceptions</Filter>
     </ClInclude>
   </ItemGroup>

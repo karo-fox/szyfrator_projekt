@@ -24,7 +24,7 @@ int CipherCommunicator::set_offset() const {
 
 int CipherCommunicator::set_rails() const {
 	while (true) {
-		ui_.show_text(ui_.parse(LangCode::set_rails) + " [0<]:");
+		ui_.show_text(ui_.parse(LangCode::set_rails) + " [0 - ]:");
 		int offset = ui_.integer_input();
 		try {
 			validate_not_0(offset);

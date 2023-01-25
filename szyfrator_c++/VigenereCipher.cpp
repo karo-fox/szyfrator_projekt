@@ -1,3 +1,6 @@
+#include <string>
+#include <set>
+
 #include "VigenereCipher.h"
 #include "UserInterface.h"
 #include "CeasarCipher.h"

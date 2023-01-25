@@ -26,8 +26,8 @@ std::map<LangCode, std::string> polish{
 	{ LangCode::choose_language, "Wybierz jezyk" },
 	// screen actions codes
 	{ LangCode::main_screen_actions, 
-		"[settings]: przejdz do ustawien\n"
 		"[start]: rozpocznij szyfrowanie lub rozszyfrowanie\n"
+		"[settings]: przejdz do ustawien\n"
 		"[quit]: zakoncz dzialanie programu\n" },
 	{ LangCode::settings_screen_actions, 
 		"[language]: zmien jezyk interfejsu\n"
@@ -41,8 +41,8 @@ std::map<LangCode, std::string> polish{
 	{ LangCode::choose_cipher, "Wybierz jeden z nastepujacych szyfrow" },
 	{ LangCode::available_ciphers,
 		"[ceasar]: Szyfr Cezara\n"
-		"[four square]: Szyfr \"cztery kwadraty\"\n"
 		"[vigenere]: Szyfr Vigenere'a\n"
+		"[four square]: Szyfr \"cztery kwadraty\"\n"
 		"[rail fence]: Szyfr p³otkowy" },
 	// other encryption codes
 	{ LangCode::result, "Twoj wynik" },

@@ -26,8 +26,8 @@ std::map<LangCode, std::string> english{
 	{ LangCode::choose_language, "Choose language" },
 	// screen actions codes
 	{ LangCode::main_screen_actions,
-		"[settings]: go to settings\n"
 		"[start]: encrypt or decrypt message\n"
+		"[settings]: go to settings\n"
 		"[quit]: quit\n" },
 	{ LangCode::settings_screen_actions,
 		"[language]: change interface langauge\n"
@@ -41,8 +41,8 @@ std::map<LangCode, std::string> english{
 	{ LangCode::choose_cipher, "Choose one of the following ciphers" },
 	{ LangCode::available_ciphers,
 		"[ceasar]: Ceasar's cipher\n"
-		"[four square]: Four Square cipher\n"
 		"[vigenere]: Vigenere's Cipher\n"
+		"[four square]: Four Square cipher\n"
 		"[rail fence]: Rail Fence cipher" },
 	// other encryption codes
 	{ LangCode::result, "Your result" },

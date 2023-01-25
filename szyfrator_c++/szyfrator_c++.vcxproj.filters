@@ -67,6 +67,12 @@
     <Filter Include="Source Files\Ciphers\VigenereCipher">
       <UniqueIdentifier>{44db2492-f1db-4c32-87b4-2170e5f66509}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Ciphers\RailFenceCipher">
+      <UniqueIdentifier>{7d286d1e-ef0e-4f87-b2bf-872414ad1960}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Ciphers\RailFenceCipher">
+      <UniqueIdentifier>{07d60d95-7d83-44c5-999b-b2a32ab8ab64}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -125,6 +131,9 @@
     </ClCompile>
     <ClCompile Include="CipherCommunicator.cpp">
       <Filter>Source Files\Ciphers</Filter>
+    </ClCompile>
+    <ClCompile Include="RailFenceCipher.cpp">
+      <Filter>Source Files\Ciphers\RailFenceCipher</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -215,11 +224,11 @@
     <ClInclude Include="VigenereCipher.h">
       <Filter>Header Files\Ciphers\VigenereCipher</Filter>
     </ClInclude>
-    <ClInclude Include="VigenereCommunicator.h">
-      <Filter>Header Files\Ciphers\VigenereCipher</Filter>
-    </ClInclude>
     <ClInclude Include="CipherCommunicator.h">
       <Filter>Header Files\Ciphers</Filter>
+    </ClInclude>
+    <ClInclude Include="RailFenceCipher.h">
+      <Filter>Header Files\Ciphers\RailFenceCipher</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

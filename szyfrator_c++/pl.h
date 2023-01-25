@@ -39,7 +39,8 @@ std::map<LangCode, std::string> polish{
 	{ LangCode::available_ciphers,
 		"[ceasar]: Szyfr Cezara\n"
 		"[four square]: Szyfr \"cztery kwadraty\"\n"
-		"[vigenere]: Szyfr Vigenere'a" },
+		"[vigenere]: Szyfr Vigenere'a\n"
+		"[rail fence]: Szyfr p³otkowy" },
 	// other encryption codes
 	{ LangCode::result, "Twoj wynik" },
 	{ LangCode::encrypt_decrypt, "Chcesz zaszyfrowac czy odszyfrowac?" },
@@ -49,6 +50,8 @@ std::map<LangCode, std::string> polish{
 	{ LangCode::set_direction, "Ustaw kierunek" },
 	// four square's settings codes
 	{ LangCode::set_keyword, "Ustaw slowo kluczowe" },
+	// rail fence settings codes
+	{ LangCode::set_rails, "Ustaw liczbê sztachet" },
 	// validation messages codes
 	{ LangCode::v_max_length, 
 		"Nie moze przekroczyc maksymalnej dlugosci, maksymalna dlugosc" },

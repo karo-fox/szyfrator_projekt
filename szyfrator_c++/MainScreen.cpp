@@ -9,6 +9,7 @@
 #include "CeasarCipher.h"
 #include "FourSquareCipher.h"
 #include "VigenereCipher.h"
+#include "RailFenceCipher.h"
 
 ScreenType MainScreen::run() const {
 	communicator_.show_title(ui_.parse(LangCode::main_title));
@@ -43,7 +44,7 @@ std::string MainScreen::start_encryption() const {
 	std::string message = communicator_.get_message();
 	Cipher cipher_code = communicator_.get_cipher();
 	std::string output{};
-	provide_cipher(cipher_code);
+	provide_cipher_(cipher_code);
 	if (action == CipherAction::encrypt) {
 		output = context_.encrypt_message(message);
 	}
@@ -53,7 +54,7 @@ std::string MainScreen::start_encryption() const {
 	return output;
 }
 
-void MainScreen::provide_cipher(Cipher cipher_code) const {
+void MainScreen::provide_cipher_(Cipher cipher_code) const {
 	switch (cipher_code) {
 	case Cipher::ceasar:
 		context_.set_cipher(std::make_unique<CeasarCipher>(CeasarCipher{}));
@@ -63,6 +64,9 @@ void MainScreen::provide_cipher(Cipher cipher_code) const {
 		return;
 	case Cipher::vigenere:
 		context_.set_cipher(std::make_unique<VigenereCipher>(VigenereCipher{}));
+		return;
+	case Cipher::rail_fence:
+		context_.set_cipher(std::make_unique<RailFenceCipher>(RailFenceCipher{}));
 		return;
 	}
 }

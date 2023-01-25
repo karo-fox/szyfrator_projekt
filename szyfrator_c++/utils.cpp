@@ -35,3 +35,12 @@ std::string str_to_lower(const std::string& str) {
 	}
 	return result;
 }
+
+bool vec_is_empty(std::vector<std::string> vec) {
+	for (std::string& str : vec) {
+		if (str != "") {
+			return false;
+		}
+	}
+	return true;
+}

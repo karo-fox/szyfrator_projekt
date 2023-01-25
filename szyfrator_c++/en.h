@@ -39,7 +39,8 @@ std::map<LangCode, std::string> english{
 	{ LangCode::available_ciphers,
 		"[ceasar]: Ceasar's cipher\n"
 		"[four square]: Four Square cipher\n"
-		"[vigenere]: Vigenere's Cipher" },
+		"[vigenere]: Vigenere's Cipher\n"
+		"[rail fence]: Rail Fence cipher" },
 	// other encryption codes
 	{ LangCode::result, "Your result" },
 	{ LangCode::provide_message, "Provide a message" },
@@ -49,6 +50,8 @@ std::map<LangCode, std::string> english{
 	{ LangCode::set_direction, "Set direction" },
 	// four square's settings codes
 	{ LangCode::set_keyword, "Set keyword" },
+	// rail fence settings codes
+	{ LangCode::set_rails, "Set number of rails" },
 	// validation codes
 	{ LangCode::v_max_length, "Cannot exceed max length, max length" },
 	{ LangCode::v_not_empty, "Cannot be empty" },

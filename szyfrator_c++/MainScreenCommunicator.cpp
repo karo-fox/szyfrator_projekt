@@ -48,7 +48,9 @@ Cipher MainScreenCommunicator::get_cipher() const {
         std::string input = ui_.text_input();
         try {
             validate_not_empty(input);
-            validate_allowed(input, { "ceasar", "four square", "vigenere" });
+            validate_allowed(
+                input, { "ceasar", "four square", "vigenere", "rail fence"}
+            );
             if (input == "ceasar") {
                 return Cipher::ceasar;
             }
@@ -57,6 +59,9 @@ Cipher MainScreenCommunicator::get_cipher() const {
             }
             else if (input == "vigenere") {
                 return Cipher::vigenere;
+            }
+            else if (input == "rail fence") {
+                return Cipher::rail_fence;
             }
         }
         catch (const ValidationException<std::string>& e) {

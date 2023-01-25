@@ -7,6 +7,7 @@ enum class Cipher {
 	ceasar,
 	four_square,
 	vigenere,
+	rail_fence
 };
 
 /// <summary>

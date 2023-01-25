@@ -23,6 +23,8 @@ private:
 	const MainScreenCommunicator communicator_;
 	EncryptionContext& context_;
 	const FileManager& file_manager_;
+
+	void provide_cipher_(Cipher cipher_code) const;
 public:
 	MainScreen(
 		UserInterface& ui, 
@@ -44,6 +46,4 @@ public:
 	ScreenType run() const override;
 
 	std::string start_encryption() const;
-
-	void provide_cipher(Cipher cipher_code) const;
 };

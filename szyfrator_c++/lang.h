@@ -36,6 +36,8 @@ enum class LangCode {
 	set_direction,
 	// four square's settings codes
 	set_keyword,
+	// rail fence settings codes
+	set_rails,
 	// validation codes
 	v_max_length,
 	v_not_empty,

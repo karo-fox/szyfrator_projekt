@@ -137,6 +137,7 @@
     <ClCompile Include="MainScreenCommunicator.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainScreen.cpp" />
+    <ClCompile Include="RailFenceCipher.cpp" />
     <ClCompile Include="ScreenCommunicator.cpp" />
     <ClCompile Include="ScreenController.cpp" />
     <ClCompile Include="SettingsScreen.cpp" />
@@ -166,6 +167,7 @@
     <ClInclude Include="lang.h" />
     <ClInclude Include="MainScreenCommunicator.h" />
     <ClInclude Include="pl.h" />
+    <ClInclude Include="RailFenceCipher.h" />
     <ClInclude Include="ScreenCommunicator.h" />
     <ClInclude Include="Settings.h" />
     <ClInclude Include="MainScreen.h" />
@@ -179,7 +181,6 @@
     <ClInclude Include="ValidationException.h" />
     <ClInclude Include="validators.h" />
     <ClInclude Include="VigenereCipher.h" />
-    <ClInclude Include="VigenereCommunicator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

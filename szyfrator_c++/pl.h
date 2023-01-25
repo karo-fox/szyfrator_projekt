@@ -15,6 +15,7 @@ std::map<LangCode, std::string> polish{
 	{ LangCode::current_language, "Polski" },
 	{ LangCode::invalid_input, "Podano nieprawidlowe dane" },
 	{ LangCode::key_continue, "Nacisnij 'enter' zeby kontunuowac" },
+	{ LangCode::uknown_exception, "Nieznany wyjatek" },
 	// screen titles codes
 	{ LangCode::main_title, "Szyfrator" },
 	{ LangCode::settings_title, "Ustawienia" },
@@ -60,6 +61,7 @@ std::map<LangCode, std::string> polish{
 		"Nie moze przekroczyc maksymalnej dlugosci, maksymalna dlugosc" },
 	{ LangCode::v_not_empty, "Nie moze byc pusta" },
 	{ LangCode::v_allowed, "Niedozwolone dane" },
+	{ LangCode::v_alpha, "Nie-alfabetyczne znaki niedozwolone" },
 	{ LangCode::v_not_0, "Nie moze byc 0" },
 	{ LangCode::v_max_value, "Nie moze byc wieksze od" },
 	{ LangCode::v_min_value, "Nie moze byc mniejsze od" },

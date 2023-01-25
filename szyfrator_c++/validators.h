@@ -23,6 +23,12 @@ void validate_not_empty(const std::string& value);
 /// <param name="allowed">Vector of allowed strings</param>
 void validate_allowed(const std::string& value, std::vector<std::string> allowed);
 
+/// <summary>
+/// Validate if string consists of only alphabetic characters
+/// </summary>
+/// <param name="value">String to validate</param>
+void validate_alpha(const std::string& value);
+
 
 
 /// <summary>

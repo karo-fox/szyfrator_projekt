@@ -37,3 +37,10 @@ void ScreenController::start() {
 		}
 	}
 }
+
+void ScreenController::reset() {
+	while (ScreenController::screen_stack_.size() > 0) {
+		ScreenController::screen_stack_.pop();
+	}
+	ScreenController::screen_stack_.push(ScreenController::screens_.at(ScreenType::main_menu));
+}

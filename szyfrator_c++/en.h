@@ -15,6 +15,7 @@ std::map<LangCode, std::string> english{
 	{ LangCode::current_language, "English" },
 	{ LangCode::invalid_input, "Invalid input. Try again" },
 	{ LangCode::key_continue, "Press 'enter' to continue" },
+	{ LangCode::uknown_exception, "Uknown exception" },
 	// screen titles codes
 	{ LangCode::main_title, "Main Menu" },
 	{ LangCode::settings_title, "Settings" },
@@ -59,6 +60,7 @@ std::map<LangCode, std::string> english{
 	{ LangCode::v_max_length, "Cannot exceed max length, max length" },
 	{ LangCode::v_not_empty, "Cannot be empty" },
 	{ LangCode::v_allowed, "Input not allowed" },
+	{ LangCode::v_alpha, "Not alphabetic characters not allowed" },
 	{ LangCode::v_not_0, "Cannot be 0" },
 	{ LangCode::v_max_value, "Cannot be greater than" },
 	{ LangCode::v_min_value, "Cannot be less than" },

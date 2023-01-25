@@ -1,5 +1,6 @@
 #include <vector>
 #include <string>
+#include <set>
 
 #include "utils.h"
 
@@ -55,4 +56,37 @@ std::string unique_combine(
 		}
 	}
 	return result;
+}
+
+std::string trim(const std::string& str) {
+	std::string result{ rtrim(ltrim(str)) };
+	return result;
+}
+
+std::string ltrim(const std::string& str) {
+	std::string result;
+	int pos{};
+	while (pos < str.size() && std::isspace(str.at(pos))) {
+		pos++;
+	}
+	if (pos == str.size()) {
+		return ""; 
+	}
+	else {
+		return str.substr(pos);
+	}
+}
+
+std::string rtrim(const std::string& str) {
+	std::string result;
+	int pos{ static_cast<int>(str.size() - 1) };
+	while (pos >= 0 && std::isspace(str.at(pos))) {
+		pos--;
+	}
+	if (pos == 0) {
+		return "";
+	}
+	else {
+		return str.substr(0, pos + 1);
+	}
 }

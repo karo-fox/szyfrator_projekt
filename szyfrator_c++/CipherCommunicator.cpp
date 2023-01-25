@@ -65,6 +65,7 @@ std::string CipherCommunicator::set_keyword() const {
 		try {
 			validate_not_empty(keyword);
 			validate_max_length(keyword, 26);
+			validate_alpha(keyword);
 			return keyword;
 		}
 		catch (const ValidationException<std::string>& e) {

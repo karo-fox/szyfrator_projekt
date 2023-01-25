@@ -41,3 +41,24 @@ bool vec_is_empty(std::vector<std::string> vec);
 std::string unique_combine(
 	const std::string& add_str, const std::string& unique_str = ""
 );
+
+/// <summary>
+/// Removes whitespaces from the beginning and the end of the string
+/// </summary>
+/// <param name="str">string to trim</param>
+/// <returns>Trimmed string</returns>
+std::string trim(const std::string& str);
+
+/// <summary>
+/// Removes whitespaces from the beginning of the string
+/// </summary>
+/// <param name="str">string to trim</param>
+/// <returns>Trimmed string</returns>
+std::string ltrim(const std::string& str);
+
+/// <summary>
+/// Removes whitespaces from the end of the string
+/// </summary>
+/// <param name="str">string to trim</param>
+/// <returns>Trimmed string</returns>
+std::string rtrim(const std::string& str);

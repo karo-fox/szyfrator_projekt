@@ -39,4 +39,9 @@ public:
 	/// Runs Screens in a loop
 	/// </summary>
 	void start();
+
+	/// <summary>
+	/// Resets the screen_stack_
+	/// </summary>
+	void reset();
 };

@@ -37,7 +37,7 @@ private:
 	/// <summary>
 	/// The characters that will be removed from plaintext
 	/// </summary>
-	std::set<std::string> to_remove_{ " ", "q" };
+	std::set<std::string> to_remove_{ " ", "q", ".", ",", "!", "?", ":", ";" };
 
 	/// <summary>
 	/// true if settings are different from default

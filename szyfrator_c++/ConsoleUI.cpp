@@ -3,6 +3,7 @@
 
 #include "ConsoleUI.h"
 #include "lang.h"
+#include "utils.h"
 
 void ConsoleUI::ignore_line() const {
 	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -36,7 +37,7 @@ std::string ConsoleUI::safe_input(const std::string& prompt) const {
 }
 
 std::string ConsoleUI::text_input() const {
-	return safe_input<std::string>(ConsoleUI::iprompt_);
+	return trim(safe_input<std::string>(ConsoleUI::iprompt_));
 }
 
 int ConsoleUI::integer_input() const {

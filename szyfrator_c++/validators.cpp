@@ -33,6 +33,16 @@ void validate_allowed(const std::string& value, std::vector<std::string> allowed
 	);
 }
 
+void validate_alpha(const std::string& value) {
+	for (auto& sign : value) {
+		if (!std::isalpha(sign)) {
+			throw ValidationException<std::string>(
+				"Not alphabetic characters not allowed", value, {}, LangCode::v_alpha
+			);
+		}
+	}
+}
+
 
 
 

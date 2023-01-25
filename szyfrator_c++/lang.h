@@ -12,6 +12,7 @@ enum class LangCode {
 	current_language,
 	invalid_input,
 	key_continue,
+	uknown_exception,
 	// screen titles codes
 	main_title,
 	settings_title,
@@ -45,6 +46,7 @@ enum class LangCode {
 	v_max_length,
 	v_not_empty,
 	v_allowed,
+	v_alpha,
 	v_not_0,
 	v_max_value,
 	v_min_value,

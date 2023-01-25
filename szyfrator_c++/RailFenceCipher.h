@@ -24,7 +24,7 @@ private:
 	/// <summary>
 	/// Set of letters that will be removed from plaintext
 	/// </summary>
-	std::set<std::string> to_remove_{ " ", ".", ",", "!", "?" };
+	std::set<std::string> to_remove_{ " ", ".", ",", "!", "?", ";", ":" };
 
 	/// <summary>
 	/// Removes characters specified in to_remove_ set from string

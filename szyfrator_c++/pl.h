@@ -5,6 +5,9 @@
 
 #include "lang.h"
 
+/// <summary>
+/// Polish translations of prompts
+/// </summary>
 std::map<LangCode, std::string> polish{
 	// general codes
 	{ LangCode::yes, "tak" },

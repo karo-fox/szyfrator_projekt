@@ -1,13 +1,22 @@
 #pragma once
 
-#include <stdexcept>
 #include <fstream>
 #include <string>
 
-class FileException : public std::runtime_error {
+#include "Exception.h"
+
+/// <summary>
+/// Exception class for file exceptions
+/// Holds file that caused exception
+/// </summary>
+class FileException : public Exception {
 private:
+
+	/// <summary>
+	/// The file that caused the exception
+	/// </summary>
 	std::ofstream& file_;
 public:
 	FileException(const std::string& msg, std::ofstream& file)
-		: std::runtime_error{ msg.c_str() }, file_{ file } {};
+		: Exception{ msg }, file_{ file } {};
 };

@@ -81,7 +81,7 @@ std::string RailFenceCipher::decrypt(const std::string& txt) {
 std::string RailFenceCipher::remove_redundant_(const std::string& str) {
 	std::string result;
 	for (int i{}; i < str.size(); i++) {
-		if (!redundant_.contains(std::string{ str.at(i) })) {
+		if (!to_remove_.contains(std::string{ str.at(i) })) {
 			result.push_back(str.at(i));
 		}
 	}

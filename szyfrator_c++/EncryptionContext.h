@@ -4,7 +4,6 @@
 
 #include "CipherStrategy.h"
 #include "CipherCommunicator.h"
-#include "setup.h"
 
 /// <summary>
 /// Stores currently active cipher

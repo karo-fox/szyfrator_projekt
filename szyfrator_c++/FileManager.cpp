@@ -32,4 +32,3 @@ void FileManager::save_to_file_(std::string content) const {
 	std::ofstream file{ create_new_write_file_() };
 	file << content;
 }
-

@@ -44,3 +44,15 @@ bool vec_is_empty(std::vector<std::string> vec) {
 	}
 	return true;
 }
+
+std::string unique_combine(
+	const std::string& add_str, const std::string& unique_str
+) {
+	std::string result{ unique_str };
+	for (auto& elem : add_str) {
+		if (result.find(elem) == std::string::npos) {
+			result.push_back(elem);
+		}
+	}
+	return result;
+}

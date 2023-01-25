@@ -5,6 +5,9 @@
 
 #include "lang.h"
 
+/// <summary>
+/// English translation of prompts
+/// </summary>
 std::map<LangCode, std::string> english{
 	// general codes
 	{ LangCode::yes, "yes" },

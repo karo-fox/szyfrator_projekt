@@ -142,7 +142,6 @@
     <ClCompile Include="ScreenController.cpp" />
     <ClCompile Include="SettingsScreen.cpp" />
     <ClCompile Include="SettingsScreenCommunicator.cpp" />
-    <ClCompile Include="setup.cpp" />
     <ClCompile Include="SquareMatrix.cpp" />
     <ClCompile Include="UserInterface.cpp" />
     <ClCompile Include="utils.cpp" />
@@ -175,7 +174,6 @@
     <ClInclude Include="screens.h" />
     <ClInclude Include="SettingsScreen.h" />
     <ClInclude Include="SettingsScreenCommunicator.h" />
-    <ClInclude Include="setup.h" />
     <ClInclude Include="UserInterface.h" />
     <ClInclude Include="utils.h" />
     <ClInclude Include="ValidationException.h" />

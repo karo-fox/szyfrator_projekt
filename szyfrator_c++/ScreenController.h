@@ -3,7 +3,6 @@
 #include <map>
 #include <utility>
 #include <stack>
-#include <functional>
 #include <memory>
 
 #include "screens.h"

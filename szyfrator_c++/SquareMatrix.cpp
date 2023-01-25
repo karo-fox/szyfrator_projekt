@@ -1,25 +1,14 @@
-#include <array>
+#include <utility>
 #include <string>
 
 #include "four_square.h"
 #include "Exception.h"
-
-std::string SquareMatrix::unique_combine(
-	const std::string& add_str, const std::string& unique_str
-) const {
-	std::string result{ unique_str };
-	for (auto& elem : add_str) {
-		if (result.find(elem) == std::string::npos) {
-			result.push_back(elem);
-		}
-	}
-	return result;
-}
+#include "utils.h"
 
 SquareMatrix::SquareMatrix(const std::string& keyword) {
-	std::string unique_keyword{ SquareMatrix::unique_combine(keyword) };
+	std::string unique_keyword{ unique_combine(keyword) };
 	std::string alphabet{ "abcdefghijklmnoprstuvwxyz" };
-	std::string matrix_str{ SquareMatrix::unique_combine(alphabet, unique_keyword) };
+	std::string matrix_str{ unique_combine(alphabet, unique_keyword) };
 	for (int i{}; i <= 20; i += 5) {
 		matrix_.push_back(matrix_str.substr(i, 5));
 	}

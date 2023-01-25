@@ -90,9 +90,6 @@
     <ClCompile Include="validators.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="setup.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ScreenController.cpp">
       <Filter>Source Files\UI\screens</Filter>
     </ClCompile>
@@ -160,9 +157,6 @@
     </ClInclude>
     <ClInclude Include="ciphers.h">
       <Filter>Header Files\Ciphers</Filter>
-    </ClInclude>
-    <ClInclude Include="setup.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ScreenController.h">
       <Filter>Header Files\UI\screens</Filter>

@@ -1,7 +1,6 @@
 #include <map>
 #include <utility>
 #include <stack>
-#include <functional>
 #include <memory>
 
 #include "ScreenController.h"
@@ -34,7 +33,7 @@ void ScreenController::start() {
 			ScreenController::screen_stack_.pop();
 		}
 		else if (next != ScreenType::stay) {
-			ScreenController::screen_stack_.push(ScreenController::screens_[next]);
+			ScreenController::screen_stack_.push(ScreenController::screens_.at(next));
 		}
 	}
 }

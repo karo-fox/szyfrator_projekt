@@ -11,16 +11,38 @@
 /// </summary>
 class UserInterface {
 private:
+	/// <summary>
+	/// Map of possible translations
+	/// </summary>
 	const langMap translations_;
 
+	/// <summary>
+	/// Sets up a map of possible translations
+	/// </summary>
+	/// <returns>A map of possible translations</returns>
 	langMap setup_lang_();
 public:
 	UserInterface() : translations_{ setup_lang_() } {};
 
+	/// <summary>
+	/// User settings
+	/// </summary>
 	Settings settings_{};
 	
+	/// <summary>
+	/// Parses the code of the prompt into the translation
+	/// </summary>
+	/// <param name="code">Code of the prompt</param>
+	/// <returns>Translated prompt</returns>
 	std::string parse(LangCode code) const;
 
+	/// <summary>
+	/// Parses the code of the prompt into the translation
+	/// </summary>
+	/// <typeparam name="T">Type of the arguments of the prompt</typeparam>
+	/// <param name="code">Code of the prompt</param>
+	/// <param name="args">Arguments of the promp</param>
+	/// <returns>Translated prompt</returns>
 	template <typename T>
 	std::string parse(LangCode code, std::vector<T> args) const;
 
@@ -47,6 +69,4 @@ public:
 	/// </summary>
 	/// <param name="text">Text to show</param>
 	virtual void show_text(const std::string& text) const = 0;
-
-	friend class Parsable;
 };

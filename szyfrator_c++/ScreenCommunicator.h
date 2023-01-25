@@ -7,9 +7,19 @@
 #include "UserInterface.h"
 #include "lang.h"
 
+/// <summary>
+/// Communicator for Screens
+/// </summary>
 class ScreenCommunicator : public Communicator {
 protected:
+	/// <summary>
+	/// Code of the prompt for actions to present
+	/// </summary>
 	const LangCode actions_prompt_code_;
+
+	/// <summary>
+	/// The vector of available actions
+	/// </summary>
 	const std::vector<std::string> available_actions_;
 public:
 	ScreenCommunicator(

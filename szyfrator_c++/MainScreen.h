@@ -15,15 +15,33 @@
 /// </summary>
 class MainScreen : public Screen {
 private:
+	/// <summary>
+	/// Screen that can come after this one
+	/// </summary>
 	const std::map<std::string, ScreenType> change_screen_{
 		{"settings", ScreenType::settings},
 		{"start", ScreenType::stay},
 	};
 
+	/// <summary>
+	/// Communicator for this screen
+	/// </summary>
 	const MainScreenCommunicator communicator_;
+
+	/// <summary>
+	/// EncryptionContext for managing encryption
+	/// </summary>
 	EncryptionContext& context_;
+
+	/// <summary>
+	/// FileManager for managing saving an encryption result to file
+	/// </summary>
 	const FileManager& file_manager_;
 
+	/// <summary>
+	/// Changes the active cipher in EncryptionContext
+	/// </summary>
+	/// <param name="cipher_code">Code of the cipher to be set as active</param>
 	void provide_cipher_(Cipher cipher_code) const;
 public:
 	MainScreen(
@@ -45,5 +63,9 @@ public:
 	/// <returns>Screen that should be run next</returns>
 	ScreenType run() const override;
 
+	/// <summary>
+	/// Starts the encrpytion of the message
+	/// </summary>
+	/// <returns>Encrypted text</returns>
 	std::string start_encryption() const;
 };

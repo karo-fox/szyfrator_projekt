@@ -16,6 +16,9 @@ private:
 		{"back", ScreenType::back}
 	};
 
+	/// <summary>
+	/// Communicator for SettingsScreen
+	/// </summary>
 	const SettingsScreenCommunicator communicator_;
 public:
 	SettingsScreen(UserInterface& ui) : Screen{ ui }, communicator_{ ui } {};

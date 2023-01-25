@@ -21,5 +21,10 @@ public:
 	/// <returns>New language to be set</returns>
 	Language get_language() const;
 
+	/// <summary>
+	/// Asks user for 'yes' or 'no' answer
+	/// whether to set 'save to file' option
+	/// </summary>
+	/// <returns>The answer</returns>
 	LangCode get_save_to_file_code_() const;
 };

@@ -3,6 +3,9 @@
 #include <map>
 #include <string>
 
+/// <summary>
+/// Codes of user interface prompts
+/// </summary>
 enum class LangCode {
 	// general codes
 	yes, no,
@@ -47,6 +50,9 @@ enum class LangCode {
 	v_min_value,
 };
 
+/// <summary>
+/// Available languages
+/// </summary>
 enum class Language {
 	en, pl
 };

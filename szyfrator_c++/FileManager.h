@@ -3,6 +3,7 @@
 #include <string>
 #include <fstream>
 #include <chrono>
+#include <fmt/chrono.h>
 
 /// <summary>
 /// Manages saving text into a file
@@ -14,7 +15,7 @@ private:
 	/// Format string for file name
 	/// </summary>
 	static constexpr std::string_view format_str_{
-		"encryptor_{0:%Y}_{0:%m}_{0:%C}_{0:%H}{0:%M}{0:%OS}.txt"
+		"encryptor_{0:%Y}_{0:%m}_{0:%d}_{0:%H}{0:%M}{0:%S}.txt"
 	};
 
 	/// <summary>
@@ -26,7 +27,7 @@ private:
 	/// Gets current time
 	/// </summary>
 	/// <returns>Current time</returns>
-	std::chrono::time_point<std::chrono::utc_clock> get_time_point_() const;
+	std::chrono::time_point<std::chrono::system_clock> get_time_point_() const;
 
 	/// <summary>
 	/// Generates file name from the current time

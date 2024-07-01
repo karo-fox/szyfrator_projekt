@@ -1,18 +1,18 @@
 #include <chrono>
 #include <fstream>
 #include <string>
-#include <format>
+#include <fmt/core.h>
 #include <filesystem>
 
 #include "FileManager.h"
 #include "FileException.h"
 
-std::chrono::time_point<std::chrono::utc_clock> FileManager::get_time_point_() const {
-	return std::chrono::utc_clock::now();
+std::chrono::time_point<std::chrono::system_clock> FileManager::get_time_point_() const {
+	return std::chrono::system_clock::now();
 }
 
 std::string FileManager::generate_file_name_() const {
-	return std::format(FileManager::format_str_, FileManager::get_time_point_());
+	return fmt::format(FileManager::format_str_, FileManager::get_time_point_());
 }
 
 std::ofstream FileManager::create_new_write_file_() const {

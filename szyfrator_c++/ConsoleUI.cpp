@@ -1,5 +1,6 @@
 #include <string>
 #include <iostream>
+#include <limits>
 
 #include "ConsoleUI.h"
 #include "lang.h"

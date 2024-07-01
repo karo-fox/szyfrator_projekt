@@ -365,3 +365,5 @@ FodyWeavers.xsd
 test
 Sample-Test1
 /encryptionFiles
+
+build

@@ -4,7 +4,7 @@
 #include <string>
 
 #include "ScreenCommunicator.h"
-#include "settings.h"
+#include "Settings.h"
 #include "lang.h"
 
 class SettingsScreenCommunicator : public ScreenCommunicator {

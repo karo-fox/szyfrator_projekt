@@ -1,7 +1,7 @@
 #include <string>
 
 #include "SettingsScreenCommunicator.h"
-#include "settings.h"
+#include "Settings.h"
 #include "validators.h"
 #include "ValidationException.h"
 
